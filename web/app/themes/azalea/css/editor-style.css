@@ -1,0 +1,369 @@
+/*
+Theme Name: Azalea
+Description: Used to style the TinyMCE editor.
+*/
+
+body {
+	color: #6a6c6f;
+	font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.875;
+	margin: 24px 30px;
+	max-width: 770px;
+	vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #1d1e1f;
+	font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	font-weight: bold;
+	line-height: 1.25;
+	margin: 0 0 24px;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 21px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5,
+h6 {
+	font-size: 16px;
+}
+
+a {
+	color: #ff868f;
+	text-decoration: none;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+address {
+	font-style: italic;
+	margin: 0 0 24px;
+}
+
+mark,
+ins {
+	background-color: rgba(255,134,143,0.2);
+	color: #3a3b3d;
+	padding: 0 3px;
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 24px;
+}
+
+blockquote {
+	border-left: 1px solid #ff868f;
+	color: #1d1e1f;
+	font-size: 21px;
+	font-style: italic;
+	line-height: 1.5;
+	margin: 0 0 24px;
+	padding: 15px 0 15px 30px;
+	position: relative;
+}
+
+blockquote:before {
+	background-color: #fff;
+	color: #ff868f;
+	content: "\201C";
+	font: bold 36px/1.16667 "Times New Roman",Georgia,serif;
+	height: 30px;
+	left: -15px;
+	position: absolute;
+	text-align: center;
+	top: 15px;
+	width: 30px;
+}
+
+blockquote cite,
+blockquote small {
+	color: #b6b6b6;
+	display: block;
+	font: 12px/1.5 Arial,Helvetica,sans-serif;
+	letter-spacing: 1px;
+	margin-top: 12px;
+	text-transform: uppercase;
+}
+
+blockquote p {
+	margin-bottom: 12px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+blockquote:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+	font-family: monospace, serif;
+}
+
+pre {
+	background-color: #f6f6f6;
+	color: #3a3b3d;
+	font-size: 14px;
+	line-height: 1.71428;
+	margin-bottom: 24px;
+	padding: 24px 30px;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	top: -6px;
+}
+
+sup {
+	bottom: -3px;
+}
+
+small {
+	font-size: 80%;
+}
+
+hr {
+	background-color: #eee;
+	border: 0;
+	height: 1px;
+	margin: 24px 0;
+}
+
+ul,
+ol {
+	margin: 0 0 24px;
+	padding: 0 0 0 30px;
+}
+
+ul {
+	list-style: circle;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 0 24px;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 24px;
+}
+
+table,
+.mce-item-table {
+	border-collapse: separate;
+	border-spacing: 0;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0 0 24px;
+	text-align: left;
+	width: 100%;
+}
+
+table caption,
+.mce-item-table caption {
+	color: #b6b6b6;
+	font: italic 14px/1.5 Arial,Helvetica,sans-serif;
+	text-align: left;
+	margin-bottom: 12px;
+}
+
+table th,
+.mce-item-table th {
+	color: #1d1e1f;
+	font-weight: 700;
+}
+
+table th,
+table td,
+.mce-item-table td,
+.mce-item-table th {
+	padding: 9px 10px;
+}
+
+img {
+	border: 0;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+a img {
+	display: block;
+}
+
+figure {
+	margin: 0;
+}
+
+.alignleft {
+	float: left;
+	margin: 6px 30px 12px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 6px 0 12px 30px;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 6 auto 24px;
+}
+
+.wp-caption {
+	background: transparent;
+	border: none;
+	margin-bottom: 24px;
+	max-width: 100%;
+	padding: 0;
+	text-align: inherit;
+}
+
+.wp-caption-text,
+.wp-caption-dd {
+	color: #b6b6b6;
+	font: italic 14px/1.5 Arial,Helvetica,sans-serif;
+	padding: 12px 0 0;
+	text-align: left;
+}
+
+.gallery {
+	margin: 0 -6px 24px;
+	padding: 0;
+}
+
+.gallery-item {
+	display: inline-block;
+	max-width: 100%;
+	padding: 6px;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
+.intro {
+	color: #1d1e1f;
+	font-size: 18px;
+	line-height: 1.66667;
+	margin-bottom: 30px;
+}
+
+.twocolumn {
+	-webkit-column-count: 2;
+	-moz-column-count:    2;
+	column-count:         2;
+	-webkit-column-gap: 30px;
+	-moz-column-gap:    30px;
+	column-gap:         30px;
+}
