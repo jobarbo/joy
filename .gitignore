@@ -38,6 +38,8 @@ bower_components
 bin
 .vagrant
 
+log/*
+
 # Assets
 .DS_Store
 .sass-cache
