@@ -28,8 +28,8 @@ set :user, 'jbarbeau89'
 set :branch, :master
 
 # Set the default deploy path to use different folders for different environments
-set :deploy_to, "/home/#{fetch(:user)}/public_html/#{fetch(:application)}/#{fetch(:stage)}"
-set :tmp_dir, "/home/#{fetch(:user)}/public_html/tmp"
+set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}/#{fetch(:stage)}"
+set :tmp_dir, "/home/#{fetch(:user)}/tmp"
 
 # Set the default symlink folders to symlink after the deployment cycle is done.
 set :bedrock_staging_symlink, 'dev'
@@ -51,7 +51,7 @@ namespace :deploy do
   desc "Link the code folder to the webserver folder"
   task :link_release_to_public do
     on roles(:app) do
-      within "/home/#{fetch(:user)}/public_html" do
+      within "/home/#{fetch(:user)}" do
         if fetch(:stage) == :staging
           info " Symlinking to Staging"
           execute "rm -rf #{fetch(:bedrock_staging_symlink)} && ln -sf #{current_path}/web #{fetch(:bedrock_staging_symlink)}"

@@ -462,3 +462,15 @@ Resolving deltas:   0% (0/28)   Resolving deltas:   3% (1/28)   Resolving delt
  DEBUG [baf2016a] Command: ( export WP_ENV="development" ; /usr/bin/env ls -xtr /home/jbarbeau89/public_html/joy/staging/releases )
  DEBUG [baf2016a] 	ls: impossible d'accéder à /home/jbarbeau89/public_html/joy/staging/releases
  DEBUG [baf2016a] 	: Trop de niveaux de liens symboliques
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:35:07 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [987d54fa] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as jbarbeau89@160.153.72.129
+ DEBUG [987d54fa] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+ DEBUG [987d54fa] 	mkdir: impossible de créer le répertoire « /home/jbarbeau89/public_html »: Trop de niveaux de liens symboliques
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:37:04 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4f6c4607] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as jbarbeau89@160.153.72.129
+ DEBUG [4f6c4607] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+ DEBUG [4f6c4607] 	mkdir: impossible de créer le répertoire « /home/jbarbeau89/public_html »: Trop de niveaux de liens symboliques
