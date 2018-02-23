@@ -1,0 +1,18 @@
+// ==========================================================================
+// Print styles
+// ==========================================================================
+
+@media print
+  @page
+    size: portrait
+
+  *,
+  *::before,
+  *::after
+    color: #000 !important
+
+  body
+    max-width: 670px
+
+  html
+    font-size: 10px !important

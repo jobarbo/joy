@@ -1,0 +1,171 @@
+// ==========================================================================
+// BASE - Forms
+// ==========================================================================
+
+$input-padding: rem(10)
+
+=input-default
+  width: 100%
+  padding: $input-padding
+  border: 1px solid $grey-medium
+  border-radius: 0
+  background: #fff
+  font-family: $font-family-default
+  font-size: 90%
+  transition: border $trans-time linear
+
+  &:focus
+    border: 1px solid #000
+
+  &:disabled
+    background: $grey-light
+    color: $grey-medium
+    -webkit-text-fill-color: $grey-medium
+
+
+// Default Form elements
+// ==========================================================================
+form
+  +clearfix
+
+fieldset
+  border: 0
+  margin: 0
+  padding: 0
+
+label
+  display: block
+  margin-bottom: 0.3em
+
+  abbr[title]
+    // For Required field, use the following pattern:
+    // <label for="Name">Name <abbr title="Required">*</abbr></label>
+    text-decoration: none
+
+// - - - Inputs - - -
+input
+  &:not([type]),
+  &[type='color'],
+  &[type='date'],
+  &[type='datetime'],
+  &[type='datetime-local'],
+  &[type='email'],
+  &[type='month'],
+  &[type='number'],
+  &[type='password'],
+  &[type='search'],
+  &[type='tel'],
+  &[type='text'],
+  &[type='time'],
+  &[type='url'],
+  &[type='week']
+    +input-default
+
+  &[type='submit'],
+  &[type='file']
+    appearance: none
+    height: auto
+    border: 0
+    outline: none
+    outline-color: transparent
+    background-color: transparent
+    -webkit-font-smoothing: inherit !important
+
+
+// - - - Textarea - - -
+textarea
+  +input-default
+  height: auto
+  padding: $input-padding
+  line-height: $line-height-default
+  resize: vertical
+
+
+// - - - Select - - -
+select
+  +input-default
+  appearance: none
+  outline: none
+
+  &:-moz-focusring
+    // Remove outline in Firefox
+    color: transparent
+    text-shadow: 0 0 0 #000
+
+
+// Customizable select
+// ==========================================================================
+// You must follow the following pattern:
+// <div class="select"><select>...</select></div>
+
+.select
+  position: relative
+  display: inline-block
+  width: 100%
+
+  select
+    margin-bottom: 0
+
+    &::-ms-expand
+      // Remove the arrow in IE
+      display: none
+
+  &::after
+    // Arrow, triangle shape through borders
+    content: ''
+    position: absolute
+    top: rem(16)
+    right: rem(15)
+    width: 0
+    height: 0
+    pointer-events: none
+    border-width: rem(8) rem(5) 0
+    border-style: solid
+    border-color: #000 transparent transparent
+
+
+// Customizable checkbox + radiobutton
+// ==========================================================================
+
+input[type='checkbox'],
+input[type='radio']
+  // Hides the input while keeping the HTML5 validation
+  // Margin is used to position the validation tooltip
+  position: absolute
+  z-index: -1
+  margin: rem(10) 0 0 rem(8)
+  opacity: 0
+
+  & + label
+    display: block
+    position: relative
+    margin-bottom: 0.5em
+    padding-left: rem(38)
+    line-height: rem(28)
+    cursor: pointer
+
+    // You can also achieve the same effect with an icon, like a checkmark, instead of an image
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: rem(28)
+      height: rem(28)
+      // The check-radio image has to be in 2x for HD/Retina device
+      background: url('../img/check-radio.png') 0 0 no-repeat
+      background-size: rem(28) rem(112)
+      // Force the background in print
+      -webkit-print-color-adjust: exact
+
+input[type='checkbox']
+  &:checked + label::before
+    background-position: 0 rem(-28)
+
+input[type='radio']
+  & + label::before
+    background-position: 0 rem(-56)
+
+  &:checked + label::before
+    background-position: 0 rem(-84)

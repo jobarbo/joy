@@ -1,0 +1,35 @@
+// ==========================================================================
+// BASE - Typography
+// ==========================================================================
+
+body
+  font: 400 rem($font-size-default) / #{$line-height-default} $font-family-default
+  color: $text-color-default
+
+a
+  color: $grey-dark
+  text-decoration: none
+  transition: color $trans-time linear
+
+  &:hover,
+  &:focus
+    color: $grey-light
+
+#{$content},
+#{$editor}
+  a
+    text-decoration: underline
+p
+  margin: 0 0 1em 0
+
+  &:last-child
+    // Prevent double margin
+    margin-bottom: 0
+
+// Highlight color
+::selection
+  border: 0
+  background: rgba(0, 0, 0, 0.1)
+  color: $black
+  text-shadow: none
+  outline: none

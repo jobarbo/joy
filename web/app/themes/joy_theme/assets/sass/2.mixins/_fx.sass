@@ -1,0 +1,18 @@
+// ==========================================================================
+// MIXINS - FX
+// ==========================================================================
+
+// - - - Black & white - - -
+=bw($n: on)
+  @if $n==on
+    $n: 100
+  @if $n==off
+    $n: 0
+  $n: strip-unit($n)
+  @if $n > 0
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+    filter: gray
+  @else
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale")
+    filter: none
+  filter: #{ "grayscale(" + $n + "%)" }

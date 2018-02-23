@@ -1,0 +1,43 @@
+// ==========================================================================
+// MIXINS - Media queries
+// ==========================================================================
+
+=screen($minmax: max, $width: rem(1024))
+  @media only screen and (#{$minmax}-width: $width)
+    @content
+
+=min-width($width)
+  @media only screen and (min-width: $width)
+    @content
+
+=max-width($width)
+  @media only screen and (max-width: $width)
+    @content
+
+=between-width($min, $max)
+  @media only screen and (min-width: $min) and (max-width: $max)
+    @content
+
+=min-height($height)
+  @media only screen and (min-height: $height)
+    @content
+
+=max-height($height)
+  @media only screen and (max-height: $height)
+    @content
+
+=desktop-only
+  @media only screen and (min-width: rem($mobile-threshold))
+    @content
+
+=mobile-only
+  @media only screen and (max-width: #{ ($mobile-threshold - 1) / $font-size-default }rem)
+    @content
+
+=print
+  @media only print
+    @content
+
+=retina($ratio: 2)
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio), only screen and (min-device-pixel-ratio: $ratio)
+    @content

@@ -1,0 +1,71 @@
+// ==========================================================================
+// BASE - Icons
+// ==========================================================================
+
+// Declare icon font
++font-face('icons', '../fonts/icons/icons')
+
+// List icons
+$icons: (check: '\f100', chevron-down: '\f101', chevron-left: '\f102', chevron-right: '\f103', chevron-up: '\f104', close: '\f105', facebook: '\f106', instagram: '\f107', linkedin: '\f108', menu: '\f109', search: '\f10a', twitter: '\f10b', )
+
+=icon-styles
+  display: inline-block
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  font-family: 'icons'
+  text-decoration: inherit
+  text-transform: none
+  speak: none
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+// Icon mixin
+=icon($icon: false, $position: before, $styles: true)
+  @if $position == both
+    $position: 'before, &:after'
+  &:#{$position}
+    @if $icon
+      content: '#{map-get($icons, $icon)}'
+    @if $styles
+      +icon-styles
+    @content
+
+[class^="icon"]::before
+  +icon-styles
+
+.icon-check::before
+  content: '\f100'
+
+.icon-chevron-down::before
+  content: '\f101'
+
+.icon-chevron-left::before
+  content: '\f102'
+
+.icon-chevron-right::before
+  content: '\f103'
+
+.icon-chevron-up::before
+  content: '\f104'
+
+.icon-close::before
+  content: '\f105'
+
+.icon-facebook::before
+  content: '\f106'
+
+.icon-instagram::before
+  content: '\f107'
+
+.icon-linkedin::before
+  content: '\f108'
+
+.icon-menu::before
+  content: '\f109'
+
+.icon-search::before
+  content: '\f10a'
+
+.icon-twitter::before
+  content: '\f10b'

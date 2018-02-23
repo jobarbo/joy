@@ -1,0 +1,40 @@
+// ==========================================================================
+// BASE - Helper classes
+// ==========================================================================
+
+.clearfix
+  +clearfix
+
+.hidden
+  display: none
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+.invisible
+  visibility: hidden
+
+// - - - Hides the text in the span for accessibility purpose - - -
+=text-hidden
+  span
+    font-size: 0
+
+.text-hidden
+  +text-hidden
+
+// - - - Display only on mobile - - -
+.hide-on-desktop
+  +desktop-only
+    display: none
+
+// - - - Display only on desktop - - -
+.hide-on-mobile
+  +mobile-only
+    display: none

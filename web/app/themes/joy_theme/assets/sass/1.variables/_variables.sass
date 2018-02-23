@@ -1,0 +1,59 @@
+// ==========================================================================
+//  VARIABLES
+// ==========================================================================
+
+
+// Colors
+// ==========================================================================
+
+$black: #181818
+$grey-dark: #444
+$grey-medium: #a0a0a0
+$grey-light: #d5d5d5
+
+
+//  Typography
+// ==========================================================================
+
+// - - - Font-face, for locally loaded font - - -
+=font-face($family, $path, $weight: normal, $style: normal)
+  @font-face
+    font-family: $family
+    src: url('#{$path}.woff2') format('woff2'), url('#{$path}.woff') format('woff')
+    font-weight: $weight
+    font-style: $style
+
+
+$font-size-default: 16
+$line-height-default: 1.25
+$text-color-default: $black
+
+// - - - Font families - - -
+$font-family-default: 'Helvetica Neue', Helvetica, Arial, sans-serif
+$open-sans: 'Open Sans', $font-family-default
+
+
+// Animation
+// ==========================================================================
+
+// Default transition time
+$trans-time: 0.2s
+
+
+//  Settings
+// ==========================================================================
+
+// Under this threshold, the site enter the "mobile" resolutions
+// In px, no unit
+$mobile-threshold: 768
+
+// The selector of the main content, used for styles that apply only to the body text, like lists
+// Replace 'main' by the appropriate selector for your framework, or you can define one yourself
+// Wordpress & Drupal: '.content' should work, or '.content article'
+// Magento: '.std'
+$content: 'main'
+
+// The selector for CMS WYSIWYG fields
+// Wordpress: #tinyMce
+// Drupal: .cke_editable
+$editor: '#tinyMce'

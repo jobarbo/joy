@@ -1,9 +1,9 @@
 {
-  "name": "roots/bedrock",
+  "name": "o2web/bedrock",
   "type": "project",
   "license": "MIT",
-  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
+  "description": "A modern WordPress stack",
+  "homepage": "http://roots.io/wordpress-stack/",
   "authors": [
     {
       "name": "Scott Walkinshaw",
@@ -17,31 +17,65 @@
     }
   ],
   "keywords": [
-    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+    "wordpress", "stack", "capistrano", "composer", "vagrant", "wp"
   ],
   "support": {
     "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
+    "forum": "http://discourse.roots.io/category/bedrock"
   },
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "generate-salts": true,
+    "secure-http": false
+  },
+  "autoload": {
+    "psr-0": {
+      "Roots\\Bedrock\\Installer": "scripts",
+      "O2\\Bedrock\\Setup": "scripts"
+    }
+  },
+  "scripts": {
+    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"],
+    "post-create-project-cmd": ["O2\\Bedrock\\Setup::theme"]
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://satis.o2web.ca"
+    },
+    {
+      "type": "composer",
+      "url": "https://languages.koodimonni.fi"
     }
   ],
   "require": {
-    "php": ">=5.6",
-    "composer/installers": "~1.2.0",
-    "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.8.1",
-    "oscarotero/env": "^1.1.0",
-    "roots/wp-password-bcrypt": "1.0.0"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^2.5.1"
+    "php": ">=5.4",
+    "johnpbloch/wordpress": "4.8.0",
+    "composer/installers": "v1.0.12",
+    "vlucas/phpdotenv": "~1.0.9",
+    "koodimonni-language/core-fr_fr": "*",
+    "wordpress/advanced-custom-fields-pro": "5.3.7",
+    "wordpress/gravityforms": "2.0.2.9",
+    "wordpress/gravityforms-mailchimp": "4.2.2",
+    "wordpress/admin-columns-pro": "4.0.5",
+
+    "wpackagist-plugin/rewrite-rules-inspector": "^1.0",
+    "wpackagist-plugin/manual-image-crop": "^1.0",
+    "wpackagist-plugin/force-regenerate-thumbnails": "^2.0",
+    "wpackagist-plugin/intuitive-custom-post-order": "^3.0",
+
+    "wordpress/wpml-multilingual-cms": "3.4.1",
+    "wordpress/wpml-string-translation": "2.3.9",
+    "wordpress/wpml-translation-management": "2.2.1",
+    "wordpress/wpml-media": "2.1.22",
+
+    "wpackagist-plugin/google-analytics-dashboard-for-wp": "^4.0",
+    "wpackagist-plugin/wordpress-seo": "^3.4",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^1.2"
   },
   "extra": {
     "installer-paths": {
@@ -49,14 +83,11 @@
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "web/wp"
-  },
-  "scripts": {
-    "post-root-package-install": [
-      "php -r \"copy('.env.example', '.env');\""
-    ],
-    "test": [
-      "vendor/bin/phpcs"
-    ]
+    "wordpress-install-dir": "web/wp",
+    "dropin-paths": {
+      "web/app/languages/": ["vendor:koodimonni-language"],
+      "web/app/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "web/app/languages/themes/": ["vendor:koodimonni-theme-language"]
+    }
   }
 }

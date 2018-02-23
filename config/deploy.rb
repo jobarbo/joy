@@ -32,7 +32,7 @@ set :deploy_to, "/home/#{fetch(:user)}/public_html/#{fetch(:application)}/#{fetc
 set :tmp_dir, "/home/#{fetch(:user)}/public_html/tmp"
 
 # Set the default symlink folders to symlink after the deployment cycle is done.
-set :bedrock_dev_symlink, 'dev'
+set :bedrock_staging_symlink, 'dev'
 set :bedrock_production_symlink, 'public_html'
 set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
 SSHKit.config.command_map[:composer] = "~/bin/composer.phar"
@@ -41,8 +41,8 @@ set :log_level, :debug
 
 # Apache users with .htaccess files:
 # it needs to be added to linked_files so it persists across deploys:
- set :linked_files, fetch(:linked_files, []).push('.env', 'web/.htaccess')
-# set :linked_files, fetch(:linked_files, []).push('.env')
+# set :linked_files, fetch(:linked_files, []).push('.env', 'web/.htaccess')
+set :linked_files, fetch(:linked_files, []).push('.env')
 set :linked_dirs, fetch(:linked_dirs, []).push('web/app/uploads')
 
 set :pty, true
@@ -52,9 +52,9 @@ namespace :deploy do
   task :link_release_to_public do
     on roles(:app) do
       within "/home/#{fetch(:user)}/public_html" do
-        if fetch(:stage) == :dev
-          info " Symlinking to Dev"
-          execute "rm -rf #{fetch(:bedrock_dev_symlink)} && ln -sf #{current_path}/web #{fetch(:bedrock_dev_symlink)}"
+        if fetch(:stage) == :staging
+          info " Symlinking to Staging"
+          execute "rm -rf #{fetch(:bedrock_staging_symlink)} && ln -sf #{current_path}/web #{fetch(:bedrock_staging_symlink)}"
         else
           info " Symlinking to Production"
           execute "rm -rf #{fetch(:bedrock_production_symlink)} && ln -sf #{current_path}/web #{fetch(:bedrock_production_symlink)}"

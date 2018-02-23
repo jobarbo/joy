@@ -1,0 +1,43 @@
+// ==========================================================================
+// BASE - Icons
+// ==========================================================================
+
+// Declare icon font
+// The random number prevent caching of the font, both for us and the users. It's renewed everytime we call FontCustom
+@font-face
+  font-family: 'icons'
+  src: url('../fonts/icons/<%= font_name %>.woff?<%= rand(99999) %>') format('woff')
+
+// List icons
+$icons: (<% @glyphs.each do |name, value| %><%= name.to_s %>: '\<%= value[:codepoint].to_s(16) %>', <% end %>)
+
+=icon-styles
+  display: inline-block
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  font-family: '<%= font_name %>'
+  text-decoration: inherit
+  text-transform: none
+  speak: none
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+// Icon mixin
+=icon($icon: false, $position: before, $styles: true)
+  @if $position == both
+    $position: 'before, &:after'
+  &:#{$position}
+    @if $icon
+      content: '#{map-get($icons, $icon)}'
+    @if $styles
+      +icon-styles
+    @content
+
+[class^="icon"]::before
+  +icon-styles
+
+<% @glyphs.each do |name, value| %>.icon-<%= name.to_s %>::before
+  content: '\<%= value[:codepoint].to_s(16) %>'
+
+<% end %>
