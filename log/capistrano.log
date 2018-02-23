@@ -49,3 +49,416 @@
   INFO ---------------------------------------------------------------------------
   INFO [d5c7e280] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as deploy@example.com
  DEBUG [d5c7e280] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:23:18 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [5d274432] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as jbarbeau89@160.153.72.129
+ DEBUG [5d274432] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:25:04 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [a00f7bff] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as jbarbeau89@160.153.72.129
+ DEBUG [a00f7bff] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:25:54 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [d6c3e21f] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as jbarbeau89@160.153.72.129
+ DEBUG [d6c3e21f] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:26:56 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [0c73fe6c] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as jbarbeau89@160.153.72.129
+ DEBUG [0c73fe6c] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:29:04 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [10350ef2] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as jbarbeau89@160.153.72.129
+ DEBUG [10350ef2] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:31:02 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c04e8fa3] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as jbarbeau89@160.153.72.129
+ DEBUG [c04e8fa3] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+  INFO [c04e8fa3] Finished in 1.109 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/jbarbeau89/public_html/tmp/joy/git-ssh.sh 0.0%
+  INFO Uploading /home/jbarbeau89/public_html/tmp/joy/git-ssh.sh 100.0%
+  INFO [a9b214a4] Running /usr/bin/env chmod +rx /home/jbarbeau89/public_html/tmp/joy/git-ssh.sh as jbarbeau89@160.153.72.129
+ DEBUG [a9b214a4] Command: ( export WP_ENV="development" ; /usr/bin/env chmod +rx /home/jbarbeau89/public_html/tmp/joy/git-ssh.sh )
+  INFO [a9b214a4] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [b8751b8a] Running /usr/bin/env git ls-remote --heads git@github.com:jobarbo/joy.git as jbarbeau89@160.153.72.129
+ DEBUG [b8751b8a] Command: ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/public_html/tmp/joy/git-ssh.sh" ; /usr/bin/env git ls-remote --heads git@github.com:jobarbo/joy.git )
+ DEBUG [b8751b8a] 	343f677b4c7d4a9d402997a58a8e38a72ab4d21e	refs/heads/develop
+0b25005add54c383dc34aa61c99f89361c3305cd	refs/heads/master
+  INFO [b8751b8a] Finished in 3.547 seconds with exit status 0 (successful).
+  INFO [2166f46a] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/shared /home/jbarbeau89/public_html/joy/staging/releases as jbarbeau89@160.153.72.129
+ DEBUG [2166f46a] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/shared /home/jbarbeau89/public_html/joy/staging/releases )
+  INFO [2166f46a] Finished in 0.312 seconds with exit status 0 (successful).
+  INFO [1982b522] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/shared/web/app/uploads as jbarbeau89@160.153.72.129
+ DEBUG [1982b522] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/shared/web/app/uploads )
+  INFO [1982b522] Finished in 0.254 seconds with exit status 0 (successful).
+  INFO [7b346ca4] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/shared as jbarbeau89@160.153.72.129
+ DEBUG [7b346ca4] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/shared )
+  INFO [7b346ca4] Finished in 0.253 seconds with exit status 0 (successful).
+ DEBUG [889a8038] Running [ -f /home/jbarbeau89/public_html/joy/staging/shared/.env ] as jbarbeau89@160.153.72.129
+ DEBUG [889a8038] Command: [ -f /home/jbarbeau89/public_html/joy/staging/shared/.env ]
+ DEBUG [889a8038] Finished in 0.981 seconds with exit status 0 (successful).
+ DEBUG [169c3c38] Running [ -f /home/jbarbeau89/public_html/joy/staging/current/REVISION ] as jbarbeau89@160.153.72.129
+ DEBUG [169c3c38] Command: [ -f /home/jbarbeau89/public_html/joy/staging/current/REVISION ]
+ DEBUG [169c3c38] Finished in 0.211 seconds with exit status 0 (successful).
+ DEBUG [3c826e2e] Running /usr/bin/env cat /home/jbarbeau89/public_html/joy/staging/current/REVISION 2>/dev/null as jbarbeau89@160.153.72.129
+ DEBUG [3c826e2e] Command: ( export WP_ENV="development" ; /usr/bin/env cat /home/jbarbeau89/public_html/joy/staging/current/REVISION 2>/dev/null )
+ DEBUG [3c826e2e] 	22ef8bd
+ DEBUG [3c826e2e] Finished in 0.259 seconds with exit status 0 (successful).
+ DEBUG [f7750ad0] Running [ -f /home/jbarbeau89/public_html/joy/staging/repo/HEAD ] as jbarbeau89@160.153.72.129
+ DEBUG [f7750ad0] Command: [ -f /home/jbarbeau89/public_html/joy/staging/repo/HEAD ]
+ DEBUG [f7750ad0] Finished in 0.255 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/jbarbeau89/public_html/joy/staging/repo
+ DEBUG [058a08ee] Running if test ! -d /home/jbarbeau89/public_html/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/repo'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [058a08ee] Command: if test ! -d /home/jbarbeau89/public_html/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/repo'" 1>&2; false; fi
+ DEBUG [058a08ee] Finished in 0.250 seconds with exit status 0 (successful).
+  INFO [646dfe5f] Running /usr/bin/env git remote update --prune as jbarbeau89@160.153.72.129
+ DEBUG [646dfe5f] Command: cd /home/jbarbeau89/public_html/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/public_html/tmp/joy/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [646dfe5f] 	Fetching origin
+ DEBUG [646dfe5f] 	remote: Counting objects: 161, done.[K
+ DEBUG [646dfe5f] 	remote: Compressing objects:   0% (1/121)   [Kremote: Compressing objects:   1% (2/121)   [Kremote: Compressing objects:   2% (3/121)   [Kremote: Compressing objects:   3% (4/121)   [Kremote: Compressing objects:   4% (5/121)   [Kremote: Compressing objects:   5% (7/121)   [Kremote: Compressing objects:   6% (8/121)   [Kremote: Compressing objects:   7% (9/121)   [Kremote: Compressing objects:   8% (10/121)   [Kremote: Compressing objects:   9% (11/121)   [Kremote: Compressing objects:  10% (13/121)   [Kremote: Compressing objects:  11% (14/121)   [Kremote: Compressing objects:  12% (15/121)   [Kremote: Compressing objects:  13% (16/121)   [Kremote: Compressing objects:  14% (17/121)   [Kremote: Compressing objects:  15% (19/121)   [Kremote: Compressing objects:  16% (20/121)   [Kremote: Compressing objects:  17% (21/121)   [Kremote: Compressing objects:  18% (22/121)   [Kremote: Compressing objects:  19% (23/121)   [Kremote: Compressing objects:  20% (25/121)   [Kremote: Compressing objects:  21% (26/121)   [Kremote: Compressing objects:  22% (27/121)   [K
+ DEBUG [646dfe5f] 	remote: Compressing objects:  23% (28/121)   [Kremote: Compressing objects:  24% (30/121)   [Kremote: Compressing objects:  25% (31/121)   [Kremote: Compressing objects:  26% (32/121)   [Kremote: Compressing objects:  27% (33/121)   [Kremote: Compressing objects:  28% (34/121)   [Kremote: Compressing objects:  29% (36/121)   [Kremote: Compressing objects:  30% (37/121)   [Kremote: Compressing objects:  31% (38/121)   [Kremote: Compressing objects:  32% (39/121)   [Kremote: Compressing objects:  33% (40/121)   [Kremote: Compressing objects:  34% (42/121)   [Kremote: Compressing objects:  35% (43/121)   [Kremote: Compressing objects:  36% (44/121)   [Kremote: Compressing objects:  37% (45/121)   [Kremote: Compressing objects:  38% (46/121)   [Kremote: Compressing objects:  39% (48/121)   [Kremote: Compressing objects:  40% (49/121)   [Kremote: Compressing objects:  41% (50/121)   [Kremote: Compressing objects:  42% (51/121)   [Kremote: Compressing objects:  43% (53/121)   [Kremote: Compressing objects:  44% (54/121)   [Kremote: Compressing objects:  45% (55/121)   [Kremote: Compressing objects:  46% (56/121)   [Kremote: Compressing objects:  47% (57/121)   [Kremote: Compressing objects:  48% (59/121)   [Kremote: Compressing objects:  49% (60/121)   [Kremote: Compressing objects:  50% (61/121)   [Kremote: Compressing objects:  51% (62/121)   [Kremote: Compressing objects:  52% (63/121)   [Kremote: Compressing objects:  53% (65/121)   [Kremote: Compressing objects:  54% (66/121)   [Kremote: Compressing objects:  55% (67/121)   [Kremote: Compressing objects:  56% (68/121)   [Kremote: Compressing objects:  57% (69/121)   [Kremote: Compressing objects:  58% (71/121)   [Kremote: Compressing objects:  59% (72/121)   [Kremote: Compressing objects:  60% (73/121)   [Kremote: Compressing objects:  61% (74/121)   [Kremote: Compressing objects:  62% (76/121)   [Kremote: Compressing objects:  63% (77/121)   [Kremote: Compressing objects:  64% (78/121)   [Kremote: Compressing objects:  65% (79/121)   [Kremote: Compressing objects:  66% (80/121)   [Kremote: Compressing objects:  67% (82/121)   [Kremote: Compressing objects:  68% (83/121)   [Kremote: Compressing objects:  69% (84/121)   [Kremote: Compressing objects:  70% (85/121)   [Kremote: Compressing objects:  71% (86/121)   [Kremote: Compressing objects:  72% (88/121)   [Kremote: Compressing objects:  73% (89/121)   [Kremote: Compressing objects:  74% (90/121)   [Kremote: Compressing objects:  75% (91/121)   [Kremote: Compressing objects:  76% (92/121)   [Kremote: Compressing objects:  77% (94/121)   [Kremote: Compressing objects:  78% (95/121)   [Kremote: Compressing objects:  79% (96/121)   [Kremote: Compressing objects:  80% (97/121)   [Kremote: Compressing objects:  81% (99/121)   [Kremote: Compressing objects:  82% (100/121)   [Kremote: Compressing objects:  83% (101/121)   [Kremote: Compressing objects:  84% (102/121)   [Kremote: Compressing objects:  85% (103/121)   [Kremote: Compressing objects:  86% (105/121)   [Kremote: Compressing objects:  87% (106/121)   [Kremote: Compressing objects:  88% (107/121)   [Kremote: Compressing objects:  89% (108/121)   [Kremote: Compressing objects:  90% (109/121)   [Kremote: Compressing objects:  91% (111/121)   [Kremote: Compressing objects:  92% (112/121)   [Kremote: Compressing objects:  93% (113/121)   [Kremote: Compressing objects:  94% (114/121)   [Kremote: Compressing objects:  95% (115/121)   [Kremote: Compressing objects:  96% (117/121)   [Kremote: Compressing objects:  97% (118/121)   [Kremote: Compressing objects:  98% (119/121)   [Kremote: Compressing objects:  99% (120/121)   [Kremote: Compressing objects: 100% (121/121)   [Kremote: Compressing objects: 100% (121/121), done.[K
+ DEBUG [646dfe5f] 	Receiving objects:   0% (1/161)   Receiving objects:   1% (2/161)   Receiving objects:   2% (4/161)   Receiving objects:   3% (5/161)   Receiving objects:   4% (7/161)   Receiving objects:   5% (9/161)   Receiving objects:   6% (10/161)   Receiving objects:   7% (12/161)   Receiving objects:   8% (13/161)   
+ DEBUG [646dfe5f] 	Receiving objects:   9% (15/161)   Receiving objects:  10% (17/161)   Receiving objects:  11% (18/161)   Receiving objects:  12% (20/161)   Receiving objects:  13% (21/161)   Receiving objects:  14% (23/161)   Receiving objects:  15% (25/161)   Receiving objects:  16% (26/161)   Receiving objects:  17% (28/161)   Receiving objects:  18% (29/161)   Receiving objects:  19% (31/161)   Receiving objects:  20% (33/161)   Receiving objects:  21% (34/161)   Receiving objects:  22% (36/161)   Receiving objects:  23% (38/161)   
+ DEBUG [646dfe5f] 	Receiving objects:  24% (39/161)   Receiving objects:  25% (41/161)   Receiving objects:  26% (42/161)   Receiving objects:  27% (44/161)   Receiving objects:  28% (46/161)   Receiving objects:  29% (47/161)   Receiving objects:  30% (49/161)   Receiving objects:  31% (50/161)   Receiving objects:  32% (52/161)   Receiving objects:  33% (54/161)   Receiving objects:  34% (55/161)   Receiving objects:  35% (57/161)   Receiving objects:  36% (58/161)   Receiving objects:  37% (60/161)   Receiving objects:  38% (62/161)   Receiving objects:  39% (63/161)   Receiving objects:  40% (65/161)   Receiving objects:  41% (67/161)   Receiving objects:  42% (68/161)   Receiving objects:  43% (70/161)   Receiving objects:  44% (71/161)   Receiving objects:  45% (73/161)   Receiving objects:  46% (75/161)   Receiving objects:  47% (76/161)   Receiving objects:  48% (78/161)   Receiving objects:  49% (79/161)   Receiving objects:  50% (81/161)   Receiving objects:  51% (83/161)   Receiving objects:  52% (84/161)   
+ DEBUG [646dfe5f] 	Receiving objects:  53% (86/161)   
+ DEBUG [646dfe5f] 	Receiving objects:  54% (87/161)   Receiving objects:  55% (89/161)   Receiving objects:  56% (91/161)   Receiving objects:  57% (92/161)   Receiving objects:  58% (94/161)   Receiving objects:  59% (95/161)   Receiving objects:  60% (97/161)   Receiving objects:  61% (99/161)   Receiving objects:  62% (100/161)   Receiving objects:  63% (102/161)   Receiving objects:  64% (104/161)   
+ DEBUG [646dfe5f] 	Receiving objects:  65% (105/161)   Receiving objects:  66% (107/161)   Receiving objects:  67% (108/161)   Receiving objects:  68% (110/161)   Receiving objects:  69% (112/161)   Receiving objects:  70% (113/161)   Receiving objects:  71% (115/161)   Receiving objects:  72% (116/161)   Receiving objects:  73% (118/161)   Receiving objects:  74% (120/161)   Receiving objects:  75% (121/161)   Receiving objects:  76% (123/161)   Receiving objects:  77% (124/161)   Receiving objects:  78% (126/161)   Receiving objects:  79% (128/161)   Receiving objects:  80% (129/161)   Receiving objects:  81% (131/161)   Receiving objects:  82% (133/161)   Receiving objects:  83% (134/161)   Receiving objects:  84% (136/161)   Receiving objects:  85% (137/161)   Receiving objects:  86% (139/161)   Receiving objects:  87% (141/161)   Receiving objects:  88% (142/161)   
+ DEBUG [646dfe5f] 	remote: Total 161 (delta 28), reused 161 (delta 28), pack-reused 0[K
+Receiving objects:  89% (144/161)   Receiving objects:  90% (145/161)   Receiving objects:  91% (147/161)   Receiving objects:  92% (149/161)   Receiving objects:  93% (150/161)   Receiving objects:  94% (152/161)   Receiving objects:  95% (153/161)   Receiving objects:  96% (155/161)   Receiving objects:  97% (157/161)   Receiving objects:  98% (158/161)   Receiving objects:  99% (160/161)   Receiving objects: 100% (161/161)   Receiving objects: 100% (161/161), 129.21 KiB, done.
+Resolving deltas:   0% (0/28)   Resolving deltas:   3% (1/28)   Resolving deltas:   7% (2/28)   Resolving deltas:  10% (3/28)   Resolving deltas:  14% (4/28)   Resolving deltas:  17% (5/28)   Resolving deltas:  21% (6/28)   Resolving deltas:  42% (12/28)   Resolving deltas:  46% (13/28)   Resolving deltas:  50% (14/28)   Resolving deltas:  53% (15/28)   Resolving deltas:  57% (16/28)   Resolving deltas:  64% (18/28)   Resolving deltas:  71% (20/28)   Resolving deltas:  75% (21/28)   Resolving deltas:  78% (22/28)   
+ DEBUG [646dfe5f] 	Resolving deltas:  82% (23/28)   Resolving deltas:  85% (24/28)   Resolving deltas:  89% (25/28)   Resolving deltas:  92% (26/28)   Resolving deltas:  96% (27/28)   Resolving deltas: 100% (28/28)   Resolving deltas: 100% (28/28), completed with 11 local objects.
+ DEBUG [646dfe5f] 	From github.com:jobarbo/joy
+   22ef8bd..343f677  develop    -> develop
+  INFO [646dfe5f] Finished in 2.968 seconds with exit status 0 (successful).
+ DEBUG [2713ddba] Running if test ! -d /home/jbarbeau89/public_html/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/repo'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [2713ddba] Command: if test ! -d /home/jbarbeau89/public_html/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/repo'" 1>&2; false; fi
+ DEBUG [2713ddba] Finished in 0.252 seconds with exit status 0 (successful).
+  INFO [51e207b1] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 as jbarbeau89@160.153.72.129
+ DEBUG [51e207b1] Command: cd /home/jbarbeau89/public_html/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/public_html/tmp/joy/git-ssh.sh" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 )
+  INFO [51e207b1] Finished in 0.255 seconds with exit status 0 (successful).
+  INFO [cac84710] Running /usr/bin/env git archive develop | tar -x -f - -C /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 as jbarbeau89@160.153.72.129
+ DEBUG [cac84710] Command: cd /home/jbarbeau89/public_html/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/public_html/tmp/joy/git-ssh.sh" ; /usr/bin/env git archive develop | tar -x -f - -C /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 )
+  INFO [cac84710] Finished in 0.314 seconds with exit status 0 (successful).
+ DEBUG [5ea2e927] Running if test ! -d /home/jbarbeau89/public_html/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/repo'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [5ea2e927] Command: if test ! -d /home/jbarbeau89/public_html/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/repo'" 1>&2; false; fi
+ DEBUG [5ea2e927] Finished in 0.253 seconds with exit status 0 (successful).
+ DEBUG [ef7e580f] Running /usr/bin/env git rev-list --max-count=1 develop as jbarbeau89@160.153.72.129
+ DEBUG [ef7e580f] Command: cd /home/jbarbeau89/public_html/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/public_html/tmp/joy/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [ef7e580f] 	343f677b4c7d4a9d402997a58a8e38a72ab4d21e
+ DEBUG [ef7e580f] Finished in 0.255 seconds with exit status 0 (successful).
+ DEBUG [0f5bedfa] Running if test ! -d /home/jbarbeau89/public_html/joy/staging/releases/20180223163110; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/releases/20180223163110'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [0f5bedfa] Command: if test ! -d /home/jbarbeau89/public_html/joy/staging/releases/20180223163110; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/releases/20180223163110'" 1>&2; false; fi
+ DEBUG [0f5bedfa] Finished in 0.250 seconds with exit status 0 (successful).
+  INFO [3f2b36ef] Running /usr/bin/env echo "343f677b4c7d4a9d402997a58a8e38a72ab4d21e" >> REVISION as jbarbeau89@160.153.72.129
+ DEBUG [3f2b36ef] Command: cd /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 && ( export WP_ENV="development" ; /usr/bin/env echo "343f677b4c7d4a9d402997a58a8e38a72ab4d21e" >> REVISION )
+  INFO [3f2b36ef] Finished in 0.266 seconds with exit status 0 (successful).
+  INFO [40af5a4b] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 as jbarbeau89@160.153.72.129
+ DEBUG [40af5a4b] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 )
+  INFO [40af5a4b] Finished in 3.569 seconds with exit status 0 (successful).
+ DEBUG [b04e607d] Running [ -L /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/.env ] as jbarbeau89@160.153.72.129
+ DEBUG [b04e607d] Command: [ -L /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/.env ]
+ DEBUG [b04e607d] Finished in 2.420 seconds with exit status 1 (failed).
+ DEBUG [9a553ea8] Running [ -f /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/.env ] as jbarbeau89@160.153.72.129
+ DEBUG [9a553ea8] Command: [ -f /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/.env ]
+ DEBUG [9a553ea8] Finished in 0.248 seconds with exit status 1 (failed).
+  INFO [8181fd7f] Running /usr/bin/env ln -s /home/jbarbeau89/public_html/joy/staging/shared/.env /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/.env as jbarbeau89@160.153.72.129
+ DEBUG [8181fd7f] Command: ( export WP_ENV="development" ; /usr/bin/env ln -s /home/jbarbeau89/public_html/joy/staging/shared/.env /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/.env )
+  INFO [8181fd7f] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [62bbb2fa] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app as jbarbeau89@160.153.72.129
+ DEBUG [62bbb2fa] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app )
+  INFO [62bbb2fa] Finished in 0.254 seconds with exit status 0 (successful).
+ DEBUG [10f0cad7] Running [ -L /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app/uploads ] as jbarbeau89@160.153.72.129
+ DEBUG [10f0cad7] Command: [ -L /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app/uploads ]
+ DEBUG [10f0cad7] Finished in 0.252 seconds with exit status 1 (failed).
+ DEBUG [efec3201] Running [ -d /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app/uploads ] as jbarbeau89@160.153.72.129
+ DEBUG [efec3201] Command: [ -d /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app/uploads ]
+ DEBUG [efec3201] Finished in 0.251 seconds with exit status 0 (successful).
+  INFO [45de8105] Running /usr/bin/env rm -rf /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app/uploads as jbarbeau89@160.153.72.129
+ DEBUG [45de8105] Command: ( export WP_ENV="development" ; /usr/bin/env rm -rf /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app/uploads )
+  INFO [45de8105] Finished in 0.254 seconds with exit status 0 (successful).
+  INFO [8fe27cfc] Running /usr/bin/env ln -s /home/jbarbeau89/public_html/joy/staging/shared/web/app/uploads /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app/uploads as jbarbeau89@160.153.72.129
+ DEBUG [8fe27cfc] Command: ( export WP_ENV="development" ; /usr/bin/env ln -s /home/jbarbeau89/public_html/joy/staging/shared/web/app/uploads /home/jbarbeau89/public_html/joy/staging/releases/20180223163110/web/app/uploads )
+  INFO [8fe27cfc] Finished in 0.254 seconds with exit status 0 (successful).
+ DEBUG [6c58becf] Running if test ! -d /home/jbarbeau89/public_html/joy/staging/releases/20180223163110; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/releases/20180223163110'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [6c58becf] Command: if test ! -d /home/jbarbeau89/public_html/joy/staging/releases/20180223163110; then echo "Directory does not exist '/home/jbarbeau89/public_html/joy/staging/releases/20180223163110'" 1>&2; false; fi
+ DEBUG [6c58becf] Finished in 0.252 seconds with exit status 0 (successful).
+  INFO [00086beb] Running ~/bin/composer.phar install --no-dev --no-interaction --optimize-autoloader as jbarbeau89@160.153.72.129
+ DEBUG [00086beb] Command: cd /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 && ( export WP_ENV="development" ; ~/bin/composer.phar install --no-dev --no-interaction --optimize-autoloader )
+ DEBUG [00086beb] 	[32mLoading composer repositories with package information[39m
+ DEBUG [00086beb] 	[32mInstalling dependencies from lock file[39m
+ DEBUG [00086beb] 	[32mPackage operations: 22 installs, 0 updates, 0 removals[39m
+ DEBUG [00086beb] 	  - Installing [32mjohnpbloch/wordpress-core-installer[39m ([33m1.0.0[39m): 
+ DEBUG [00086beb] 	Loading from cache
+ DEBUG [00086beb] 	  - Installing [32mkoodimonni/composer-dropin-installer[39m ([33m1.1.0[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)         
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mcomposer/installers[39m ([33mv1.0.12[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)         
+ DEBUG [00086beb] 	  - Installing [32mjohnpbloch/wordpress-core[39m ([33m4.8.0[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)         
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mjohnpbloch/wordpress[39m ([33m4.8.0[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)         
+ DEBUG [00086beb] 	  - Installing [32mkoodimonni-language/core-fr_fr[39m ([33m4.8[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	    Moving dropin files...
+
+ DEBUG [00086beb] 	  - Installing [32mvlucas/phpdotenv[39m ([33mv1.0.9[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)         
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mwordpress/admin-columns-pro[39m ([33m4.0.5[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m60%[39m)
+ DEBUG [00086beb] 	Downloading ([33m65%[39m)
+ DEBUG [00086beb] 	Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m95%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mwordpress/advanced-custom-fields-pro[39m ([33m5.3.7[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m60%[39m)
+ DEBUG [00086beb] 	Downloading ([33m65%[39m)
+ DEBUG [00086beb] 	Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m95%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mwordpress/gravityforms[39m ([33m2.0.2.9[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m60%[39m)
+ DEBUG [00086beb] 	Downloading ([33m65%[39m)
+ DEBUG [00086beb] 	Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m95%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mwordpress/gravityforms-mailchimp[39m ([33m4.2.2[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	  - Installing [32mwordpress/wpml-media[39m ([33m2.1.22[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	  - Installing [32mwordpress/wpml-multilingual-cms[39m ([33m3.4.1[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m60%[39m)
+ DEBUG [00086beb] 	Downloading ([33m65%[39m)
+ DEBUG [00086beb] 	Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m95%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mwordpress/wpml-string-translation[39m ([33m2.3.9[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m65%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	  - Installing [32mwordpress/wpml-translation-management[39m ([33m2.2.1[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m60%[39m)
+ DEBUG [00086beb] 	Downloading ([33m65%[39m)
+ DEBUG [00086beb] 	Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m95%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mwpackagist-plugin/acf-content-analysis-for-yoast-seo[39m ([33m1.2.6[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	  - Installing [32mwpackagist-plugin/force-regenerate-thumbnails[39m ([33m2.0.6[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)Downloading ([33m25%[39m)Downloading ([33m30%[39m)Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	  - Installing [32mwpackagist-plugin/google-analytics-dashboard-for-wp[39m ([33m4.9.6.2[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m60%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	  - Installing [32mwpackagist-plugin/intuitive-custom-post-order[39m ([33m3.0.8[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           Downloading ([33m35%[39m)Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	  - Installing [32mwpackagist-plugin/manual-image-crop[39m ([33m1.12[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m60%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	  - Installing [32mwpackagist-plugin/rewrite-rules-inspector[39m ([33m1.2.1[39m): 
+ DEBUG [00086beb] 	Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m95%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	  - Installing [32mwpackagist-plugin/wordpress-seo[39m ([33m3.9[39m): Downloading ([33mconnecting...[39m)
+ DEBUG [00086beb] 	Downloading ([33m0%[39m)           
+ DEBUG [00086beb] 	Downloading ([33m5%[39m)
+ DEBUG [00086beb] 	Downloading ([33m10%[39m)
+ DEBUG [00086beb] 	Downloading ([33m15%[39m)
+ DEBUG [00086beb] 	Downloading ([33m20%[39m)
+ DEBUG [00086beb] 	Downloading ([33m25%[39m)
+ DEBUG [00086beb] 	Downloading ([33m30%[39m)
+ DEBUG [00086beb] 	Downloading ([33m35%[39m)
+ DEBUG [00086beb] 	Downloading ([33m40%[39m)
+ DEBUG [00086beb] 	Downloading ([33m45%[39m)
+ DEBUG [00086beb] 	Downloading ([33m50%[39m)
+ DEBUG [00086beb] 	Downloading ([33m55%[39m)
+ DEBUG [00086beb] 	Downloading ([33m60%[39m)
+ DEBUG [00086beb] 	Downloading ([33m65%[39m)
+ DEBUG [00086beb] 	Downloading ([33m70%[39m)
+ DEBUG [00086beb] 	Downloading ([33m75%[39m)
+ DEBUG [00086beb] 	Downloading ([33m80%[39m)
+ DEBUG [00086beb] 	Downloading ([33m85%[39m)
+ DEBUG [00086beb] 	Downloading ([33m90%[39m)
+ DEBUG [00086beb] 	Downloading ([33m95%[39m)
+ DEBUG [00086beb] 	Downloading ([33m100%[39m)
+ DEBUG [00086beb] 	
+ DEBUG [00086beb] 	[32mGenerating optimized autoload files[39m
+  INFO [00086beb] Finished in 128.348 seconds with exit status 0 (successful).
+  INFO [303c1201] Running /usr/bin/env ln -s /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 /home/jbarbeau89/public_html/joy/staging/releases/current as jbarbeau89@160.153.72.129
+ DEBUG [303c1201] Command: ( export WP_ENV="development" ; /usr/bin/env ln -s /home/jbarbeau89/public_html/joy/staging/releases/20180223163110 /home/jbarbeau89/public_html/joy/staging/releases/current )
+  INFO [303c1201] Finished in 0.253 seconds with exit status 0 (successful).
+  INFO [5b452539] Running /usr/bin/env mv /home/jbarbeau89/public_html/joy/staging/releases/current /home/jbarbeau89/public_html/joy/staging as jbarbeau89@160.153.72.129
+ DEBUG [5b452539] Command: ( export WP_ENV="development" ; /usr/bin/env mv /home/jbarbeau89/public_html/joy/staging/releases/current /home/jbarbeau89/public_html/joy/staging )
+  INFO [5b452539] Finished in 0.389 seconds with exit status 0 (successful).
+ DEBUG [3c7f1694] Running if test ! -d /home/jbarbeau89/public_html; then echo "Directory does not exist '/home/jbarbeau89/public_html'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [3c7f1694] Command: if test ! -d /home/jbarbeau89/public_html; then echo "Directory does not exist '/home/jbarbeau89/public_html'" 1>&2; false; fi
+ DEBUG [3c7f1694] Finished in 0.252 seconds with exit status 0 (successful).
+  INFO Symlinking to Production
+  INFO [cfbe59b2] Running rm -rf public_html && ln -sf /home/jbarbeau89/public_html/joy/staging/current/web public_html as jbarbeau89@160.153.72.129
+ DEBUG [cfbe59b2] Command: rm -rf public_html && ln -sf /home/jbarbeau89/public_html/joy/staging/current/web public_html
+  INFO [cfbe59b2] Finished in 2.067 seconds with exit status 0 (successful).
+ DEBUG [baf2016a] Running /usr/bin/env ls -xtr /home/jbarbeau89/public_html/joy/staging/releases as jbarbeau89@160.153.72.129
+ DEBUG [baf2016a] Command: ( export WP_ENV="development" ; /usr/bin/env ls -xtr /home/jbarbeau89/public_html/joy/staging/releases )
+ DEBUG [baf2016a] 	ls: impossible d'accéder à /home/jbarbeau89/public_html/joy/staging/releases
+ DEBUG [baf2016a] 	: Trop de niveaux de liens symboliques
