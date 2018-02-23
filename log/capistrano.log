@@ -716,3 +716,36 @@ Resolving deltas:   0% (0/44)   Resolving deltas:   6% (3/44)   Resolving delt
  DEBUG [d49d4f91] 	sent 129 bytes  received 42 bytes  68.40 bytes/sec
  DEBUG [d49d4f91] 	total size is 0  speedup is 0.00
   INFO [d49d4f91] Finished in 1.292 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 12:44:11 -0500 cap staging uploads:sync
+  INFO ---------------------------------------------------------------------------
+  INFO [67ae8707] Running /usr/bin/env rsync -avzO -e 'ssh -p 22' --exclude='.DS_Store' jbarbeau89@160.153.72.129:/home/jbarbeau89/joy/staging/shared/web/app/uploads/ web/app/uploads/ as jbarbeau@localhost
+ DEBUG [67ae8707] Command: ( export WP_ENV="development" ; /usr/bin/env rsync -avzO -e 'ssh -p 22' --exclude='.DS_Store' jbarbeau89@160.153.72.129:/home/jbarbeau89/joy/staging/shared/web/app/uploads/ web/app/uploads/ )
+ DEBUG [67ae8707] 	receiving file list ... done
+ DEBUG [67ae8707] 	
+ DEBUG [67ae8707] 	sent 35 bytes  received 108 bytes  95.33 bytes/sec
+ DEBUG [67ae8707] 	total size is 0  speedup is 0.00
+  INFO [67ae8707] Finished in 1.540 seconds with exit status 0 (successful).
+  INFO [2848206e] Running /usr/bin/env rsync -avzO -e 'ssh -p 22' --exclude='.DS_Store'  web/app/uploads/ jbarbeau89@160.153.72.129:/home/jbarbeau89/joy/staging/shared/web/app/uploads/ as jbarbeau@localhost
+ DEBUG [2848206e] Command: ( export WP_ENV="development" ; /usr/bin/env rsync -avzO -e 'ssh -p 22' --exclude='.DS_Store'  web/app/uploads/ jbarbeau89@160.153.72.129:/home/jbarbeau89/joy/staging/shared/web/app/uploads/ )
+ DEBUG [2848206e] 	building file list ... done
+ DEBUG [2848206e] 	2018/
+ DEBUG [2848206e] 	2018/02/
+ DEBUG [2848206e] 	2018/02/cropped-flower-1024x614.jpeg
+ DEBUG [2848206e] 	2018/02/cropped-flower-1400x839.jpeg
+ DEBUG [2848206e] 	2018/02/cropped-flower-150x150.jpeg
+ DEBUG [2848206e] 	2018/02/cropped-flower-300x180.jpeg
+ DEBUG [2848206e] 	2018/02/cropped-flower-768x460.jpeg
+ DEBUG [2848206e] 	2018/02/cropped-flower-960x575.jpeg
+ DEBUG [2848206e] 	2018/02/cropped-flower.jpeg
+ DEBUG [2848206e] 	2018/02/flower-1024x683.jpeg
+ DEBUG [2848206e] 	2018/02/flower-1400x933.jpeg
+ DEBUG [2848206e] 	2018/02/flower-150x150.jpeg
+ DEBUG [2848206e] 	2018/02/flower-300x200.jpeg
+ DEBUG [2848206e] 	2018/02/flower-768x512.jpeg
+ DEBUG [2848206e] 	2018/02/flower-960x640.jpeg
+ DEBUG [2848206e] 	2018/02/flower.jpeg
+ DEBUG [2848206e] 	
+ DEBUG [2848206e] 	sent 1455246 bytes  received 340 bytes  153219.58 bytes/sec
+ DEBUG [2848206e] 	total size is 1462261  speedup is 1.00
+  INFO [2848206e] Finished in 8.821 seconds with exit status 0 (successful).
