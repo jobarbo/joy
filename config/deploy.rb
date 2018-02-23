@@ -35,7 +35,7 @@ set :tmp_dir, "/home/#{fetch(:user)}/tmp"
 set :bedrock_dev_symlink, 'dev'
 set :bedrock_production_symlink, 'public_html'
 set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
-SSHKit.config.command_map[:composer] = "php -d memory_limit=512M -d allow_url_fopen=1 -d suhosin.executor.include.whitelist=phar composer.phar"
+SSHKit.config.command_map[:composer] = "php -d memory_limit=512M -d allow_url_fopen=1 -d suhosin.executor.include.whitelist=phar ~/composer.phar"
 # Use :debug for more verbose output when troubleshooting
 set :log_level, :debug
 
