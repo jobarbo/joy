@@ -27,9 +27,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano (~> 3.5.0)
+  capistrano
   capistrano-composer
   capistrano-wpcli
 
 BUNDLED WITH
-   1.10.6
+   1.15.3

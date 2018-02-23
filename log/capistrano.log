@@ -1,0 +1,51 @@
+# Logfile created on 2018-02-23 10:59:35 -0500 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 10:59:35 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [d6722dc7] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp as deploy@example.com
+ DEBUG [d6722dc7] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:00:49 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [5e724de5] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp as deploy@example.com
+ DEBUG [5e724de5] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:03:05 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [a405c001] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp as deploy@example.com
+ DEBUG [a405c001] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:04:58 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [3f3b874e] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp as deploy@example.com
+ DEBUG [3f3b874e] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:05:57 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [8e1ddca0] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp as deploy@example.com
+ DEBUG [8e1ddca0] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:10:22 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [1782f2ee] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp as deploy@example.com
+ DEBUG [1782f2ee] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:18:00 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [e3c18ab6] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp as deploy@example.com
+ DEBUG [e3c18ab6] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:18:41 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [086442cd] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp as deploy@example.com
+ DEBUG [086442cd] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:19:45 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [1ee1168f] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as deploy@example.com
+ DEBUG [1ee1168f] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-23 11:20:55 -0500 cap staging deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [d5c7e280] Running /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ as deploy@example.com
+ DEBUG [d5c7e280] Command: ( export WP_ENV="staging" ; /usr/bin/env mkdir -p /home/jbarbeau89/public_html/tmp/joy/ )
