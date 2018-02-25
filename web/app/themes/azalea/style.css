@@ -2250,6 +2250,10 @@ img.aligncenter {
 	padding-left: 0;
 }
 
+.widget .img{
+	border-radius: 50%
+}
+
 .widget .children,
 .widget .sub-menu {
 	padding-left: 15px;
