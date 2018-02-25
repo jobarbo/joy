@@ -1528,6 +1528,8 @@ img.aligncenter {
 	border-bottom: 1px solid #eee;
 	border-top: 1px solid #eee;
 	text-align: center;
+	display: flex;
+	height: 45vh;
 }
 
 .site-header .site-branding {
