@@ -20,34 +20,6 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'azalea' ); ?>">
-		<div class="inner">
-			<button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-icon" aria-hidden="true"></span><?php esc_html_e( 'Menu', 'azalea' ); ?></button>
-			<button id="search-show" class="search-show"><span class="screen-reader-text"><?php esc_html_e( 'Search', 'azalea' ); ?></span></button>
-			<div id="menu-container" class="menu-container">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'container'      => false,
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'primary-menu'
-				) );
-				if ( has_nav_menu( 'header_social' ) ) :
-					wp_nav_menu( array(
-						'theme_location' => 'header_social',
-						'container'      => false,
-						'menu_id'        => 'header-social-links',
-						'menu_class'     => 'social-links-menu',
-						'depth'          => 1,
-						'link_before'    => '<span class="screen-reader-text">',
-						'link_after'     => '</span>'
-					) );
-				endif;
-				?>
-			</div>
-		</div><!-- .inner -->
-	</nav><!-- .main-navigation -->
-
 	<header id="masthead" class="site-header">
 		<div class="inner">
 			<div class="site-branding">
@@ -79,3 +51,30 @@
 			</div><!-- .site-branding -->
 		</div><!-- .inner -->
 	</header><!-- .site-header -->
+	<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'azalea' ); ?>">
+		<div class="inner">
+			<button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-icon" aria-hidden="true"></span><?php esc_html_e( 'Menu', 'azalea' ); ?></button>
+			<button id="search-show" class="search-show"><span class="screen-reader-text"><?php esc_html_e( 'Search', 'azalea' ); ?></span></button>
+			<div id="menu-container" class="menu-container">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'container'      => false,
+					'menu_id'        => 'primary-menu',
+					'menu_class'     => 'primary-menu'
+				) );
+				if ( has_nav_menu( 'header_social' ) ) :
+					wp_nav_menu( array(
+						'theme_location' => 'header_social',
+						'container'      => false,
+						'menu_id'        => 'header-social-links',
+						'menu_class'     => 'social-links-menu',
+						'depth'          => 1,
+						'link_before'    => '<span class="screen-reader-text">',
+						'link_after'     => '</span>'
+					) );
+				endif;
+				?>
+			</div>
+		</div><!-- .inner -->
+	</nav><!-- .main-navigation -->
