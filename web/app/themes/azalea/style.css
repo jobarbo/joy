@@ -1532,8 +1532,7 @@ img.aligncenter {
 	height: 45vh;
 }
 .site-header .inner,
-.site-header .site-branding,
-.site-branding > *{
+.site-header .site-branding{
 	display: flex;
 }
 
