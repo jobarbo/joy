@@ -1535,6 +1535,9 @@ img.aligncenter {
 .site-header .site-branding{
 	display: flex;
 }
+.site-header .site-branding{
+	align-items: center;
+}
 
 
 .site-title {
