@@ -1531,11 +1531,12 @@ img.aligncenter {
 	display: flex;
 	height: 45vh;
 }
-
-.site-header .site-branding {
-	padding-bottom: 70px;
-	padding-top: 60px;
+.site-header .inner,
+.site-header .site-branding,
+.site-branding > *{
+	display: flex;
 }
+
 
 .site-title {
 	font: 36px/1.1 'Crimson Text', serif;
