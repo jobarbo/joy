@@ -2251,7 +2251,10 @@ img.aligncenter {
 }
 
 .widget img{
-	border-radius: 50%
+	border-radius: 50%;
+	width: 70%;
+	margin: auto;
+	display: block;
 }
 
 .widget .children,
