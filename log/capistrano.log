@@ -2479,3 +2479,201 @@ Unpacking objects:   6% (1/16)   Unpacking objects:  12% (2/16)   Unpacking ob
   INFO ---------------------------------------------------------------------------
   INFO [1ca13a4a] Running /usr/bin/env mkdir -p /home/jbarbeau89/tmp as jbarbeau89@160.153.72.129
  DEBUG [1ca13a4a] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-28 20:08:37 -0400 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6ec2ea99] Running /usr/bin/env mkdir -p /home/jbarbeau89/tmp as jbarbeau89@160.153.72.129
+ DEBUG [6ec2ea99] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/tmp )
+  INFO [6ec2ea99] Finished in 1.193 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh 0.0%
+  INFO Uploading /home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh 100.0%
+  INFO [315e6970] Running /usr/bin/env chmod 700 /home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh as jbarbeau89@160.153.72.129
+ DEBUG [315e6970] Command: ( export WP_ENV="development" ; /usr/bin/env chmod 700 /home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh )
+  INFO [315e6970] Finished in 0.317 seconds with exit status 0 (successful).
+  INFO [677bcf9d] Running /usr/bin/env git ls-remote git@github.com:jobarbo/joy.git HEAD as jbarbeau89@160.153.72.129
+ DEBUG [677bcf9d] Command: ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh" ; /usr/bin/env git ls-remote git@github.com:jobarbo/joy.git HEAD )
+ DEBUG [677bcf9d] 	0b25005add54c383dc34aa61c99f89361c3305cd	HEAD
+  INFO [677bcf9d] Finished in 3.045 seconds with exit status 0 (successful).
+  INFO [3130cf81] Running /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/shared /home/jbarbeau89/joy/staging/releases as jbarbeau89@160.153.72.129
+ DEBUG [3130cf81] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/shared /home/jbarbeau89/joy/staging/releases )
+  INFO [3130cf81] Finished in 0.311 seconds with exit status 0 (successful).
+  INFO [dc561423] Running /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/shared/web/app/uploads as jbarbeau89@160.153.72.129
+ DEBUG [dc561423] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/shared/web/app/uploads )
+  INFO [dc561423] Finished in 0.314 seconds with exit status 0 (successful).
+  INFO [d19b4790] Running /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/shared as jbarbeau89@160.153.72.129
+ DEBUG [d19b4790] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/shared )
+  INFO [d19b4790] Finished in 0.308 seconds with exit status 0 (successful).
+ DEBUG [a9729284] Running [ -f /home/jbarbeau89/joy/staging/shared/.env ] as jbarbeau89@160.153.72.129
+ DEBUG [a9729284] Command: [ -f /home/jbarbeau89/joy/staging/shared/.env ]
+ DEBUG [a9729284] Finished in 0.306 seconds with exit status 0 (successful).
+ DEBUG [afa44703] Running [ -f /home/jbarbeau89/joy/staging/current/REVISION ] as jbarbeau89@160.153.72.129
+ DEBUG [afa44703] Command: [ -f /home/jbarbeau89/joy/staging/current/REVISION ]
+ DEBUG [afa44703] Finished in 0.305 seconds with exit status 0 (successful).
+ DEBUG [68e6f6d5] Running /usr/bin/env cat /home/jbarbeau89/joy/staging/current/REVISION 2>/dev/null as jbarbeau89@160.153.72.129
+ DEBUG [68e6f6d5] Command: ( export WP_ENV="development" ; /usr/bin/env cat /home/jbarbeau89/joy/staging/current/REVISION 2>/dev/null )
+ DEBUG [68e6f6d5] 	445d052def07ceda2eb350a14b5381318c3b4658
+ DEBUG [68e6f6d5] Finished in 0.328 seconds with exit status 0 (successful).
+ DEBUG [fa397562] Running [ -f /home/jbarbeau89/joy/staging/repo/HEAD ] as jbarbeau89@160.153.72.129
+ DEBUG [fa397562] Command: [ -f /home/jbarbeau89/joy/staging/repo/HEAD ]
+ DEBUG [fa397562] Finished in 0.298 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/jbarbeau89/joy/staging/repo
+ DEBUG [fe1484a1] Running if test ! -d /home/jbarbeau89/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/repo'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [fe1484a1] Command: if test ! -d /home/jbarbeau89/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/repo'" 1>&2; false; fi
+ DEBUG [fe1484a1] Finished in 0.291 seconds with exit status 0 (successful).
+  INFO [c6d91b43] Running /usr/bin/env git remote set-url origin git@github.com:jobarbo/joy.git as jbarbeau89@160.153.72.129
+ DEBUG [c6d91b43] Command: cd /home/jbarbeau89/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh" ; /usr/bin/env git remote set-url origin git@github.com:jobarbo/joy.git )
+  INFO [c6d91b43] Finished in 0.424 seconds with exit status 0 (successful).
+  INFO [cdc726c9] Running /usr/bin/env git remote update --prune as jbarbeau89@160.153.72.129
+ DEBUG [cdc726c9] Command: cd /home/jbarbeau89/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [cdc726c9] 	Fetching origin
+ DEBUG [cdc726c9] 	remote: Counting objects: 8, done.[K
+remote: Compressing objects:  25% (1/4)   [Kremote: Compressing objects:  50% (2/4)   [Kremote: Compressing objects:  75% (3/4)   [Kremote: Compressing objects: 100% (4/4)   [Kremote: Compressing objects: 100% (4/4), done.[K
+remote: Total 8 (delta 4), reused 6 (delta 2), pack-reused 0[K
+ DEBUG [cdc726c9] 	Unpacking objects:  12% (1/8)   Unpacking objects:  25% (2/8)   
+ DEBUG [cdc726c9] 	Unpacking objects:  37% (3/8)   
+ DEBUG [cdc726c9] 	Unpacking objects:  50% (4/8)   
+ DEBUG [cdc726c9] 	Unpacking objects:  62% (5/8)   Unpacking objects:  75% (6/8)   
+ DEBUG [cdc726c9] 	Unpacking objects:  87% (7/8)   Unpacking objects: 100% (8/8)   Unpacking objects: 100% (8/8), done.
+ DEBUG [cdc726c9] 	From github.com:jobarbo/joy
+   445d052..86d7e2b  develop    -> develop
+  INFO [cdc726c9] Finished in 4.282 seconds with exit status 0 (successful).
+ DEBUG [70814942] Running if test ! -d /home/jbarbeau89/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/repo'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [70814942] Command: if test ! -d /home/jbarbeau89/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/repo'" 1>&2; false; fi
+ DEBUG [70814942] Finished in 0.313 seconds with exit status 0 (successful).
+  INFO [caeaaed2] Running /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/releases/20180429000844 as jbarbeau89@160.153.72.129
+ DEBUG [caeaaed2] Command: cd /home/jbarbeau89/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh" ; /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/releases/20180429000844 )
+  INFO [caeaaed2] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [30634623] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/jbarbeau89/joy/staging/releases/20180429000844 as jbarbeau89@160.153.72.129
+ DEBUG [30634623] Command: cd /home/jbarbeau89/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/jbarbeau89/joy/staging/releases/20180429000844 )
+  INFO [30634623] Finished in 4.861 seconds with exit status 0 (successful).
+ DEBUG [32dee5fd] Running if test ! -d /home/jbarbeau89/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/repo'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [32dee5fd] Command: if test ! -d /home/jbarbeau89/joy/staging/repo; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/repo'" 1>&2; false; fi
+ DEBUG [32dee5fd] Finished in 0.305 seconds with exit status 0 (successful).
+ DEBUG [0fb6ff4b] Running /usr/bin/env git rev-list --max-count=1 develop as jbarbeau89@160.153.72.129
+ DEBUG [0fb6ff4b] Command: cd /home/jbarbeau89/joy/staging/repo && ( export WP_ENV="development" GIT_ASKPASS="/bin/echo" GIT_SSH="/home/jbarbeau89/tmp/git-ssh-joy-dev-jbarbeau.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [0fb6ff4b] 	86d7e2b34c785bd4243086099e59a31a0f193739
+ DEBUG [0fb6ff4b] Finished in 0.316 seconds with exit status 0 (successful).
+ DEBUG [15896f2a] Running if test ! -d /home/jbarbeau89/joy/staging/releases/20180429000844; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/releases/20180429000844'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [15896f2a] Command: if test ! -d /home/jbarbeau89/joy/staging/releases/20180429000844; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/releases/20180429000844'" 1>&2; false; fi
+ DEBUG [15896f2a] Finished in 0.306 seconds with exit status 0 (successful).
+  INFO [f051a611] Running /usr/bin/env echo "86d7e2b34c785bd4243086099e59a31a0f193739" >> REVISION as jbarbeau89@160.153.72.129
+ DEBUG [f051a611] Command: cd /home/jbarbeau89/joy/staging/releases/20180429000844 && ( export WP_ENV="development" ; /usr/bin/env echo "86d7e2b34c785bd4243086099e59a31a0f193739" >> REVISION )
+  INFO [f051a611] Finished in 0.322 seconds with exit status 0 (successful).
+  INFO [d2609b74] Running /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/releases/20180429000844 as jbarbeau89@160.153.72.129
+ DEBUG [d2609b74] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/releases/20180429000844 )
+  INFO [d2609b74] Finished in 0.310 seconds with exit status 0 (successful).
+ DEBUG [eec8b32a] Running [ -L /home/jbarbeau89/joy/staging/releases/20180429000844/.env ] as jbarbeau89@160.153.72.129
+ DEBUG [eec8b32a] Command: [ -L /home/jbarbeau89/joy/staging/releases/20180429000844/.env ]
+ DEBUG [eec8b32a] Finished in 0.312 seconds with exit status 1 (failed).
+ DEBUG [bd5aa20d] Running [ -f /home/jbarbeau89/joy/staging/releases/20180429000844/.env ] as jbarbeau89@160.153.72.129
+ DEBUG [bd5aa20d] Command: [ -f /home/jbarbeau89/joy/staging/releases/20180429000844/.env ]
+ DEBUG [bd5aa20d] Finished in 0.303 seconds with exit status 1 (failed).
+  INFO [831283a9] Running /usr/bin/env ln -s /home/jbarbeau89/joy/staging/shared/.env /home/jbarbeau89/joy/staging/releases/20180429000844/.env as jbarbeau89@160.153.72.129
+ DEBUG [831283a9] Command: ( export WP_ENV="development" ; /usr/bin/env ln -s /home/jbarbeau89/joy/staging/shared/.env /home/jbarbeau89/joy/staging/releases/20180429000844/.env )
+  INFO [831283a9] Finished in 0.325 seconds with exit status 0 (successful).
+  INFO [c8af1873] Running /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/releases/20180429000844/web/app as jbarbeau89@160.153.72.129
+ DEBUG [c8af1873] Command: ( export WP_ENV="development" ; /usr/bin/env mkdir -p /home/jbarbeau89/joy/staging/releases/20180429000844/web/app )
+  INFO [c8af1873] Finished in 0.305 seconds with exit status 0 (successful).
+ DEBUG [6f48f4f4] Running [ -L /home/jbarbeau89/joy/staging/releases/20180429000844/web/app/uploads ] as jbarbeau89@160.153.72.129
+ DEBUG [6f48f4f4] Command: [ -L /home/jbarbeau89/joy/staging/releases/20180429000844/web/app/uploads ]
+ DEBUG [6f48f4f4] Finished in 0.306 seconds with exit status 1 (failed).
+ DEBUG [aae7e11c] Running [ -d /home/jbarbeau89/joy/staging/releases/20180429000844/web/app/uploads ] as jbarbeau89@160.153.72.129
+ DEBUG [aae7e11c] Command: [ -d /home/jbarbeau89/joy/staging/releases/20180429000844/web/app/uploads ]
+ DEBUG [aae7e11c] Finished in 0.312 seconds with exit status 0 (successful).
+  INFO [a72ced70] Running /usr/bin/env rm -rf /home/jbarbeau89/joy/staging/releases/20180429000844/web/app/uploads as jbarbeau89@160.153.72.129
+ DEBUG [a72ced70] Command: ( export WP_ENV="development" ; /usr/bin/env rm -rf /home/jbarbeau89/joy/staging/releases/20180429000844/web/app/uploads )
+  INFO [a72ced70] Finished in 0.306 seconds with exit status 0 (successful).
+  INFO [a636d2c7] Running /usr/bin/env ln -s /home/jbarbeau89/joy/staging/shared/web/app/uploads /home/jbarbeau89/joy/staging/releases/20180429000844/web/app/uploads as jbarbeau89@160.153.72.129
+ DEBUG [a636d2c7] Command: ( export WP_ENV="development" ; /usr/bin/env ln -s /home/jbarbeau89/joy/staging/shared/web/app/uploads /home/jbarbeau89/joy/staging/releases/20180429000844/web/app/uploads )
+  INFO [a636d2c7] Finished in 0.303 seconds with exit status 0 (successful).
+ DEBUG [1b459432] Running if test ! -d /home/jbarbeau89/joy/staging/releases/20180429000844; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/releases/20180429000844'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [1b459432] Command: if test ! -d /home/jbarbeau89/joy/staging/releases/20180429000844; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/releases/20180429000844'" 1>&2; false; fi
+ DEBUG [1b459432] Finished in 0.303 seconds with exit status 0 (successful).
+  INFO [118321cf] Running ~/bin/composer.phar install --no-dev --no-interaction --optimize-autoloader as jbarbeau89@160.153.72.129
+ DEBUG [118321cf] Command: cd /home/jbarbeau89/joy/staging/releases/20180429000844 && ( export WP_ENV="development" ; ~/bin/composer.phar install --no-dev --no-interaction --optimize-autoloader )
+ DEBUG [118321cf] 	[32mLoading composer repositories with package information[39m
+ DEBUG [118321cf] 	[32mInstalling dependencies from lock file[39m
+ DEBUG [118321cf] 	[32mPackage operations: 22 installs, 0 updates, 0 removals[39m
+ DEBUG [118321cf] 	  - Installing [32mjohnpbloch/wordpress-core-installer[39m ([33m1.0.0[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mkoodimonni/composer-dropin-installer[39m ([33m1.1.0[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mcomposer/installers[39m ([33mv1.0.12[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mjohnpbloch/wordpress-core[39m ([33m4.8.0[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mjohnpbloch/wordpress[39m ([33m4.8.0[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mkoodimonni-language/core-fr_fr[39m ([33m4.8[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	    Moving dropin files...
+
+ DEBUG [118321cf] 	  - Installing [32mvlucas/phpdotenv[39m ([33mv1.0.9[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwordpress/admin-columns-pro[39m ([33m4.0.5[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwordpress/advanced-custom-fields-pro[39m ([33m5.3.7[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwordpress/gravityforms[39m ([33m2.0.2.9[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwordpress/gravityforms-mailchimp[39m ([33m4.2.2[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwordpress/wpml-media[39m ([33m2.1.22[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwordpress/wpml-multilingual-cms[39m ([33m3.4.1[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwordpress/wpml-string-translation[39m ([33m2.3.9[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwordpress/wpml-translation-management[39m ([33m2.2.1[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwpackagist-plugin/acf-content-analysis-for-yoast-seo[39m ([33m1.2.6[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwpackagist-plugin/force-regenerate-thumbnails[39m ([33m2.0.6[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwpackagist-plugin/google-analytics-dashboard-for-wp[39m ([33m4.9.6.2[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwpackagist-plugin/intuitive-custom-post-order[39m ([33m3.0.8[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwpackagist-plugin/manual-image-crop[39m ([33m1.12[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwpackagist-plugin/rewrite-rules-inspector[39m ([33m1.2.1[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	  - Installing [32mwpackagist-plugin/wordpress-seo[39m ([33m3.9[39m): 
+ DEBUG [118321cf] 	Loading from cache
+ DEBUG [118321cf] 	[32mGenerating optimized autoload files[39m
+  INFO [118321cf] Finished in 87.353 seconds with exit status 0 (successful).
+  INFO [1f0b5000] Running /usr/bin/env ln -s /home/jbarbeau89/joy/staging/releases/20180429000844 /home/jbarbeau89/joy/staging/releases/current as jbarbeau89@160.153.72.129
+ DEBUG [1f0b5000] Command: ( export WP_ENV="development" ; /usr/bin/env ln -s /home/jbarbeau89/joy/staging/releases/20180429000844 /home/jbarbeau89/joy/staging/releases/current )
+  INFO [1f0b5000] Finished in 0.319 seconds with exit status 0 (successful).
+  INFO [006ca4a6] Running /usr/bin/env mv /home/jbarbeau89/joy/staging/releases/current /home/jbarbeau89/joy/staging as jbarbeau89@160.153.72.129
+ DEBUG [006ca4a6] Command: ( export WP_ENV="development" ; /usr/bin/env mv /home/jbarbeau89/joy/staging/releases/current /home/jbarbeau89/joy/staging )
+  INFO [006ca4a6] Finished in 0.319 seconds with exit status 0 (successful).
+ DEBUG [009c59ae] Running if test ! -d /home/jbarbeau89; then echo "Directory does not exist '/home/jbarbeau89'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [009c59ae] Command: if test ! -d /home/jbarbeau89; then echo "Directory does not exist '/home/jbarbeau89'" 1>&2; false; fi
+ DEBUG [009c59ae] Finished in 0.301 seconds with exit status 0 (successful).
+  INFO Symlinking to Production
+  INFO [52a8370e] Running rm -rf public_html && ln -sf /home/jbarbeau89/joy/staging/current/web public_html as jbarbeau89@160.153.72.129
+ DEBUG [52a8370e] Command: rm -rf public_html && ln -sf /home/jbarbeau89/joy/staging/current/web public_html
+  INFO [52a8370e] Finished in 0.308 seconds with exit status 0 (successful).
+ DEBUG [85bac054] Running /usr/bin/env ls -x /home/jbarbeau89/joy/staging/releases as jbarbeau89@160.153.72.129
+ DEBUG [85bac054] Command: ( export WP_ENV="development" ; /usr/bin/env ls -x /home/jbarbeau89/joy/staging/releases )
+ DEBUG [85bac054] 	20180225011737	20180225012644	20180225013031	20180225013823	20180225014608
+20180429000844
+ DEBUG [85bac054] Finished in 0.308 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 160.153.72.129
+ DEBUG [5208f254] Running [ -d /home/jbarbeau89/joy/staging/current ] as jbarbeau89@160.153.72.129
+ DEBUG [5208f254] Command: [ -d /home/jbarbeau89/joy/staging/current ]
+ DEBUG [5208f254] Finished in 0.299 seconds with exit status 0 (successful).
+ DEBUG [48e099a7] Running /usr/bin/env readlink /home/jbarbeau89/joy/staging/current as jbarbeau89@160.153.72.129
+ DEBUG [48e099a7] Command: ( export WP_ENV="development" ; /usr/bin/env readlink /home/jbarbeau89/joy/staging/current )
+ DEBUG [48e099a7] 	/home/jbarbeau89/joy/staging/releases/20180429000844
+ DEBUG [48e099a7] Finished in 0.312 seconds with exit status 0 (successful).
+  INFO [c8564039] Running /usr/bin/env rm -rf /home/jbarbeau89/joy/staging/releases/20180225011737 as jbarbeau89@160.153.72.129
+ DEBUG [c8564039] Command: ( export WP_ENV="development" ; /usr/bin/env rm -rf /home/jbarbeau89/joy/staging/releases/20180225011737 )
+  INFO [c8564039] Finished in 2.328 seconds with exit status 0 (successful).
+ DEBUG [6bc7893d] Running if test ! -d /home/jbarbeau89/joy/staging/releases; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/releases'" 1>&2; false; fi as jbarbeau89@160.153.72.129
+ DEBUG [6bc7893d] Command: if test ! -d /home/jbarbeau89/joy/staging/releases; then echo "Directory does not exist '/home/jbarbeau89/joy/staging/releases'" 1>&2; false; fi
+ DEBUG [6bc7893d] Finished in 0.307 seconds with exit status 0 (successful).
+  INFO [12b6a051] Running /usr/bin/env echo "Branch develop (at 86d7e2b34c785bd4243086099e59a31a0f193739) deployed as release 20180429000844 by jbarbeau" >> /home/jbarbeau89/joy/staging/revisions.log as jbarbeau89@160.153.72.129
+ DEBUG [12b6a051] Command: cd /home/jbarbeau89/joy/staging/releases && ( export WP_ENV="development" ; /usr/bin/env echo "Branch develop (at 86d7e2b34c785bd4243086099e59a31a0f193739) deployed as release 20180429000844 by jbarbeau" >> /home/jbarbeau89/joy/staging/revisions.log )
+  INFO [12b6a051] Finished in 0.322 seconds with exit status 0 (successful).

@@ -11,6 +11,7 @@ web/app/uploads/*
 !web/app/mu-plugins/bedrock-autoloader.php
 web/app/languages/*
 !web/app/languages/.gitkeep
+log/capistrano.log
 
 # WordPress
 web/wp
