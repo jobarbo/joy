@@ -2677,3 +2677,92 @@ remote: Total 8 (delta 4), reused 6 (delta 2), pack-reused 0[K
   INFO [12b6a051] Running /usr/bin/env echo "Branch develop (at 86d7e2b34c785bd4243086099e59a31a0f193739) deployed as release 20180429000844 by jbarbeau" >> /home/jbarbeau89/joy/staging/revisions.log as jbarbeau89@160.153.72.129
  DEBUG [12b6a051] Command: cd /home/jbarbeau89/joy/staging/releases && ( export WP_ENV="development" ; /usr/bin/env echo "Branch develop (at 86d7e2b34c785bd4243086099e59a31a0f193739) deployed as release 20180429000844 by jbarbeau" >> /home/jbarbeau89/joy/staging/revisions.log )
   INFO [12b6a051] Finished in 0.322 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-05-30 21:17:06 -0400 cap staging uploads:sync
+  INFO ---------------------------------------------------------------------------
+  INFO [816e9a0d] Running /usr/bin/env rsync -avzO -e 'ssh -p 22' --exclude='.DS_Store' jbarbeau89@160.153.72.129:/home/jbarbeau89/joy/staging/shared/web/app/uploads/ web/app/uploads/ as jbarbeau@localhost
+ DEBUG [816e9a0d] Command: ( export WP_ENV="development" ; /usr/bin/env rsync -avzO -e 'ssh -p 22' --exclude='.DS_Store' jbarbeau89@160.153.72.129:/home/jbarbeau89/joy/staging/shared/web/app/uploads/ web/app/uploads/ )
+ DEBUG [816e9a0d] 	receiving file list ... done
+ DEBUG [816e9a0d] 	.gitkeep
+ DEBUG [816e9a0d] 	2018/
+ DEBUG [816e9a0d] 	2018/02/
+ DEBUG [816e9a0d] 	2018/02/Gigi-1-150x150.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-1-300x300.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-1-e1519520895141-150x150.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-1-e1519520895141.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-1.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-150x150.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-300x300.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-e1519520250909-150x150.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-e1519520250909.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-e1519520378678-150x150.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-e1519520378678.png
+ DEBUG [816e9a0d] 	2018/02/Gigi-e1519520555511.png
+ DEBUG [816e9a0d] 	2018/02/Gigi.png
+ DEBUG [816e9a0d] 	2018/02/Gigisquare-150x150.jpg
+ DEBUG [816e9a0d] 	2018/02/Gigisquare.jpg
+ DEBUG [816e9a0d] 	2018/02/cropped-cropped-pik-e1519523453563-1024x326.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-cropped-pik-e1519523453563-150x150.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-cropped-pik-e1519523453563-300x95.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-cropped-pik-e1519523453563-768x244.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-cropped-pik-e1519523453563-960x305.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-cropped-pik-e1519523453563.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1-1024x683.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1-1400x933.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1-150x150.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1-300x200.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1-768x512.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1-960x640.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1024x614.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-1400x839.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-150x150.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-300x180.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-768x460.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower-960x575.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-flower.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-1024x576.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-150x150.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-300x169.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-768x432.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-960x540.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-e1519523453563-1024x326.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-e1519523453563-150x150.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-e1519523453563-300x95.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-e1519523453563-768x244.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-e1519523453563-960x305.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik-e1519523453563.jpeg
+ DEBUG [816e9a0d] 	2018/02/cropped-pik.jpeg
+ DEBUG [816e9a0d] 	2018/02/flower-1024x683.jpeg
+ DEBUG [816e9a0d] 	2018/02/flower-1400x933.jpeg
+ DEBUG [816e9a0d] 	2018/02/flower-150x150.jpeg
+ DEBUG [816e9a0d] 	2018/02/flower-300x200.jpeg
+ DEBUG [816e9a0d] 	2018/02/flower-768x512.jpeg
+ DEBUG [816e9a0d] 	2018/02/flower-960x640.jpeg
+ DEBUG [816e9a0d] 	2018/02/flower.jpeg
+ DEBUG [816e9a0d] 	2018/02/gigi2-150x150.png
+ DEBUG [816e9a0d] 	2018/02/gigi2-300x300.png
+ DEBUG [816e9a0d] 	2018/02/gigi2.png
+ DEBUG [816e9a0d] 	2018/02/photo-1427835569204-a54780340cb5-1024x686.jpeg
+ DEBUG [816e9a0d] 	2018/02/photo-1427835569204-a54780340cb5-150x150.jpeg
+ DEBUG [816e9a0d] 	2018/02/photo-1427835569204-a54780340cb5-300x201.jpeg
+ DEBUG [816e9a0d] 	2018/02/photo-1427835569204-a54780340cb5-768x514.jpeg
+ DEBUG [816e9a0d] 	2018/02/photo-1427835569204-a54780340cb5-960x643.jpeg
+ DEBUG [816e9a0d] 	2018/02/photo-1427835569204-a54780340cb5.jpeg
+ DEBUG [816e9a0d] 	2018/02/pik-1024x576.jpeg
+ DEBUG [816e9a0d] 	2018/02/pik-150x150.jpeg
+ DEBUG [816e9a0d] 	2018/02/pik-300x169.jpeg
+ DEBUG [816e9a0d] 	2018/02/pik-768x432.jpeg
+ DEBUG [816e9a0d] 	2018/02/pik-960x540.jpeg
+ DEBUG [816e9a0d] 	2018/02/pik.jpeg
+ DEBUG [816e9a0d] 	
+ DEBUG [816e9a0d] 	sent 1587 bytes  received 5304548 bytes  624251.18 bytes/sec
+ DEBUG [816e9a0d] 	total size is 5324269  speedup is 1.00
+  INFO [816e9a0d] Finished in 8.191 seconds with exit status 0 (successful).
+  INFO [e8123fe9] Running /usr/bin/env rsync -avzO -e 'ssh -p 22' --exclude='.DS_Store'  web/app/uploads/ jbarbeau89@160.153.72.129:/home/jbarbeau89/joy/staging/shared/web/app/uploads/ as jbarbeau@localhost
+ DEBUG [e8123fe9] Command: ( export WP_ENV="development" ; /usr/bin/env rsync -avzO -e 'ssh -p 22' --exclude='.DS_Store'  web/app/uploads/ jbarbeau89@160.153.72.129:/home/jbarbeau89/joy/staging/shared/web/app/uploads/ )
+ DEBUG [e8123fe9] 	building file list ... done
+ DEBUG [e8123fe9] 	
+ DEBUG [e8123fe9] 	sent 2529 bytes  received 20 bytes  1699.33 bytes/sec
+ DEBUG [e8123fe9] 	total size is 5324269  speedup is 2088.77
+  INFO [e8123fe9] Finished in 1.552 seconds with exit status 0 (successful).

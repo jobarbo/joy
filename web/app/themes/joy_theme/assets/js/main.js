@@ -25,6 +25,7 @@ require([
 
 
   $(document).ready(function(){
+    console.log('jquery?');
     // code that require jQuery selections should always be executed after the document is ready.
   });
 

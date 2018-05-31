@@ -14,7 +14,7 @@ function jgtazalea_entry_category() {
 		$categories_list = get_the_category_list( esc_html__( ', ', 'azalea') );
 		if ( $categories_list && jgtazalea_categorized_blog() ) {
 			printf( '<div class="cat-links"><span class="meta-before">%1$s</span> %2$s</div>',
-				esc_html_x( 'In', 'Used before category links.', 'azalea' ),
+				esc_html_x( '', 'Used before category links.', 'azalea' ),
 				$categories_list
 			);
 		}
@@ -33,11 +33,11 @@ function jgtazalea_posted_on() {
 				esc_html_x( 'Featured', 'Used to indicate sticky post.', 'azalea' )
 			);
 		}
-		printf( '<span class="author vcard"><span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span>',
+		/*printf( '<span class="author vcard"><span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span>',
 			esc_html_x( 'Author', 'Used before post author name.', 'azalea' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			get_the_author()
-		);
+		);*/
 		jgtazalea_entry_date();
 	} elseif ( 'attachment' == get_post_type() ) {
 		jgtazalea_entry_date();
