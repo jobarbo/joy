@@ -1571,6 +1571,10 @@ img.aligncenter {
  * 6.1 Posts and Pages
  * ----------------------------------------------------------------------------
  */
+#page.site{
+	background-image: url('images/geom.png');
+}
+
 .sticky,
 .bypostauthor {}
 
