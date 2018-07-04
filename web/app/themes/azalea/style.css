@@ -1530,7 +1530,7 @@ img.aligncenter {
 	text-align: center;
 	display: flex;
 	height: 45vh;
-	background-image: url(http://joy.barbo/app/uploads/2018/05/tournesol.jpg);
+	background-image: url(/app/uploads/2018/05/tournesol.jpg);
 	background-repeat: no-repeat;
 	background-position: 0% 90%;
 	background-size: cover;
