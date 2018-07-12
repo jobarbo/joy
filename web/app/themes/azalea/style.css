@@ -425,6 +425,10 @@ table {
  * 2. General
  * ----------------------------------------------------------------------------
  */
+ @font-face {
+	font-family: leira;
+	src: url(fonts/Leira-Lite.woff);
+ }
 html,
 button,
 input,
@@ -458,7 +462,7 @@ h4,
 h5,
 h6 {
 	color: #1d1e1f;
-	font-family: 'Crimson Text', serif;
+	font-family: 'leira', serif;
 	font-weight: normal;
 	line-height: 1.25;
 	margin: 0 0 24px;
