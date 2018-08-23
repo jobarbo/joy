@@ -1,4 +1,4 @@
-set :stage, :dev
+set :stage, :staging
 set :branch, :develop
 
 # Simple Role Syntax
