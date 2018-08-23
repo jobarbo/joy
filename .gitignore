@@ -1,20 +1,54 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
+web/app/mu-plugins/*
+!web/app/mu-plugins/.gitkeep
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+!web/app/mu-plugins/disallow-indexing.php
+!web/app/mu-plugins/register-theme-directory.php
+!web/app/mu-plugins/bedrock-autoloader.php
+web/app/languages/*
+!web/app/languages/.gitkeep
+log/capistrano.log
 
 # WordPress
 web/wp
-web/.htaccess
+# web/.htaccess
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
 
 # Dotenv
 .env
 .env.*
 !.env.example
 
-# Composer
+# Vendor (e.g. Composer)
 vendor/*
 !vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+bower_components
+
+
+# Vagrant
+bin
+.vagrant
+
+log/capistrano.log
+
+# Assets
+.DS_Store
+.sass-cache
+
+assets/js/vendor/*
+assets/js/plugins/*
+assets/css/plugins/*
+assets/img/plugins/*
+
+!assets/js/plugins/modernizr
+!assets/js/plugins/o2

@@ -1,0 +1,93 @@
+{
+  "checksum": {
+    "previous": "e9a93c8d6386c8815b5e0047d4091439e6254f638ac546055f0a02629ccdffcc",
+    "current": "e9a93c8d6386c8815b5e0047d4091439e6254f638ac546055f0a02629ccdffcc"
+  },
+  "fonts": [
+    "../icons/icons.ttf",
+    "../icons/icons.svg",
+    "../icons/icons.woff",
+    "../icons/icons.eot"
+  ],
+  "glyphs": {
+    "check": {
+      "codepoint": 61696,
+      "source": "svg/check.svg"
+    },
+    "chevron-down": {
+      "codepoint": 61697,
+      "source": "svg/chevron-down.svg"
+    },
+    "chevron-left": {
+      "codepoint": 61698,
+      "source": "svg/chevron-left.svg"
+    },
+    "chevron-right": {
+      "codepoint": 61699,
+      "source": "svg/chevron-right.svg"
+    },
+    "chevron-up": {
+      "codepoint": 61700,
+      "source": "svg/chevron-up.svg"
+    },
+    "close": {
+      "codepoint": 61701,
+      "source": "svg/close.svg"
+    },
+    "facebook": {
+      "codepoint": 61702,
+      "source": "svg/facebook.svg"
+    },
+    "instagram": {
+      "codepoint": 61703,
+      "source": "svg/instagram.svg"
+    },
+    "linkedin": {
+      "codepoint": 61704,
+      "source": "svg/linkedin.svg"
+    },
+    "menu": {
+      "codepoint": 61705,
+      "source": "svg/menu.svg"
+    },
+    "search": {
+      "codepoint": 61706,
+      "source": "svg/search.svg"
+    },
+    "twitter": {
+      "codepoint": 61707,
+      "source": "svg/twitter.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "icons",
+    "force": false,
+    "input": {
+      "templates": "../icons",
+      "vectors": "svg"
+    },
+    "no_hash": true,
+    "output": {
+      "_icons.sass": "../../sass/3.base/",
+      "css": "../icons",
+      "fonts": "../icons",
+      "preview": "../icons"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "_icons.sass"
+    ]
+  },
+  "templates": [
+    "../../sass/3.base/_icons.sass"
+  ]
+}

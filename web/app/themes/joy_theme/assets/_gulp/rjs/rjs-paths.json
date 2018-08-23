@@ -1,0 +1,7 @@
+{
+    "almond": "plugins/almond/almond",
+    "select2": "plugins/select2/select2",
+    "mediaCheck": "plugins/mediaCheck/mediaCheck",
+    "slick": "plugins/slick-carousel/slick",
+    "picturefill": "plugins/picturefill/picturefill"
+}

@@ -1,91 +1,284 @@
-# [Bedrock](https://roots.io/bedrock/)
-[![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
-[![Build Status](https://img.shields.io/travis/roots/bedrock.svg?style=flat-square)](https://travis-ci.org/roots/bedrock)
+# Start-up d'un projet Wordpress<span id="start-up-dun-projet-wordpress"></span>
 
-Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
+Si vous aidez sur un projet déjà démarré, allez directement à **Aider sur un projet Wordpress**
 
-Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
+## Contenu
 
-## Features
+- [Start-up d'un projet Wordpress](#start-up-dun-projet-wordpress)
+    - [Exigences](#exigences)
+    - [Installer Composer](#installer-composer)
+    - [Installation et utilisation](#installation-et-utilisation)
+    - [Setup du Git](#setup-du-git)
+    - [Changer la langue de l'admin de Wordpress](#changer-la-langue-de-ladmin-de-wordpress)
+    - [Plugins Wordpress](#plugins-wordpress)
+        - [Exemple](#exemple)
+        - [A propos des versions des plugins](#a-propos-des-versions-des-plugins)
+        - [Installation d'un plugin qui n'est pas sur WP-Packagist à l'aide du lien de téléchargement](#installation-plugin-zip)
+- [Aider sur un projet Wordpress](#aider-sur-un-projet-wordpress)
+- [Déployer avec Capistrano](#dployer-avec-capistrano)
+    - [Étapes de déploiement](#tapes-de-dploiement)
 
-* Better folder structure
-* Dependency management with [Composer](http://getcomposer.org)
-* Easy WordPress configuration with environment specific files
-* Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
-* Autoloader for mu-plugins (use regular plugins as mu-plugins)
-* Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
+## Exigences<span id="exigences"></span>
 
-Use [Trellis](https://github.com/roots/trellis) for additional features:
+* Git
+* PHP >= 5.4 (pour Composer)
+* Ruby >= 1.9 (pour Capistrano, seulement pour faire un déploiement)
 
-* Easy development environments with [Vagrant](http://www.vagrantup.com/)
-* Easy server provisioning with [Ansible](http://www.ansible.com/) (Ubuntu 16.04, PHP 7.1, MariaDB)
-* One-command deploys
+## Installer Composer<span id="installer-composer"></span>
 
-See a complete working example in the [roots-example-project.com repo](https://github.com/roots/roots-example-project.com).
+_Si vous avez déjà Composer, passez à l'étape suivante **Installation et utilisation**_
 
-## Requirements
+**Pour Mac**: utilisez les commandes suivantes :
 
-* PHP >= 5.6
-* Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+	curl -sS https://getcomposer.org/installer | php
+	mv composer.phar /usr/local/bin/composer
 
-## Installation
+Pour plus d'information [Get Composer Mac](https://getcomposer.org/doc/00-intro.md#installation-nix)
 
-1. Create a new project in a new folder for your project:
 
-  `composer create-project roots/bedrock your-project-folder-name`
+**Pour Windows**: Téléchargez et installez [Composer](https://getcomposer.org/Composer-Setup.exe)
 
-2. Update environment variables in `.env`  file:
-  * `DB_NAME` - Database name
-  * `DB_USER` - Database user
-  * `DB_PASSWORD` - Database password
-  * `DB_HOST` - Database host
-  * `WP_ENV` - Set to environment (`development`, `staging`, `production`)
-  * `WP_HOME` - Full URL to WordPress home (http://example.com)
-  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
-  * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
+Pour plus d'information [Get Composer Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
 
-  If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command][wp-cli-dotenv]:
+## Installation et utilisation<span id="installation-et-utilisation"></span>
 
-      wp package install aaemnnosttv/wp-cli-dotenv-command
+**Note: Pour faciliter la gestion du contenu et de la database Wordpress, nous vous conseillons de faire une demande pour le setup d'un serveur de développement ainsi qu'une database pour votre projet. Cela évitera d'avoir à exporter et importer des bases de données sans cesse!**
 
-      wp dotenv salts regenerate
+1. Dans votre terminal, assurez-vous d'être au path root de votre environnement local, exemple : `/Applications/MAMP/htdocs/`.
+2. Utilisez la commande suivante :
 
-  Or, you can cut and paste from the [Roots WordPress Salt Generator][roots-wp-salt].
+		composer create-project o2web/bedrock --stability=dev --repository-url=https://satis.o2web.ca/ <nom-du-projet>
+	
+	_Remplacez `<nom-du-projet>`, et gardez l'espace qui le précéde._
+	
+3. Répondre **"yes"** aux questions **"Generate salts and append to .env file?"** et **"Do you want to remove the existing VCS (.git, .svn..) history?"**
 
-3. Add theme(s) in `web/app/themes` as you would for a normal WordPress site.
+4. Ouvrez `.env` ( _situé à la racine de votre nouveau projet_ ) à l'aide de votre éditeur de texte préféré et insérez les informations de votre database local ou remote.
+	* `DB_NAME` - Nom de la database
+	* `DB_USER` - User de la database
+	* `DB_PASSWORD` - Mot de passe de la database
+	* `DB_HOST` - Le host de la database
+	* `WP_ENV` - Spécifier l'environment (`development`, `staging`, `production`)
+	* `WP_HOME` - URL de votre site (http://example.com)
+	* `WP_SITEURL` - URL vers Wordpress (http://example.com/wp)
 
-4. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
+5. Configurez votre serveur Apache (MAMP ou XAMPP) pour que le root pointe sur exemple : `/Applications/MAMP/htdocs/<nom-du-projet>/web/`
+6. Allez sur votre adresse locale, exemple: `http://localhost:8888`, configurez le Wordpress!
+7. Et voilà!
 
-5. Access WP admin at `http://example.com/wp/wp-admin`
+------
+------
+------
 
-## Deploys
 
-There are two methods to deploy Bedrock sites out of the box:
+## Assets - Télécharger les dépendances
 
-* [Trellis](https://github.com/roots/trellis)
-* [bedrock-capistrano](https://github.com/roots/bedrock-capistrano)
+Vous avez cloné le dossier des assets, mais quelques fichiers ne sont toujours pas téléchargés (les plugins js, par exemple).
 
-Any other deployment method can be used as well with one requirement:
 
-`composer install` must be run as part of the deploy process.
+1. À l'aide du terminal, rendez-vous à l'intérieur du dossier `_gulp`. Dans un projet Bedrock, vous trouverez le dossier ici -> `web/app/themes/<votre theme>/assets/_gulp`
 
-## Documentation
+2. `sh setup.sh` pour installer gulp et les autres dépendances en mode Global.
 
-Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
+3. `gulp` pour démarrer Gulp.
 
-## Contributing
+------
 
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
+_À noter que les erreurs suivantes sont normales ... elles signifient que le module n'existe pas en version globale, et conséquemment, il sera installé._
 
-## Community
 
-Keep track of development and community news.
+```
+npm ERR! code 1
+gulp-rename not found.
+Installing gulp-rename@^1
+```
+------
 
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-* Listen to the [Roots Radio podcast](https://roots.io/podcast/)
+### Télécharger/mettre à jour les plugins Javascript
+Si vous avez modifié la liste des plugins dans le fichier `_gulp/requireJS.json`, vous devrez rouler la commande suivante avant de pouvoir les utiliser :  `sh setup.sh bower`
 
-[roots-wp-salt]:https://roots.io/salts.html
-[wp-cli-dotenv]:https://github.com/aaemnnosttv/wp-cli-dotenv-command
+### Mettre à jour les dépendances Gulp
+Si vous avez déjà des dépendances Nodes installés sur votre poste, et que vous voulez toutes les mettre à jour en même temps, utilisez la commande `sh setup.sh update`
+
+### Désinstaller les dépendances Gulp
+Si vous désirez désinstaller toutes les dépendances d'un coup, utilisez la commande `sh setup.sh uninstall`
+
+### Erreur de permissions
+Si vous avez une erreur de permissions, vous pouvez faire l'installation en mode _Super User_ avec la commande : `sudo sh setup.sh`. Il vous faudra alors entrer le mot de passe de votre utilisateur sur votre poste.
+
+------
+------
+------
+
+
+## Setup du Git<span id="setup-du-git"></span>
+
+Un simple rappel qu'il serait maintenant temps de créer votre projet sur Git et d'y mettre vos fichiers de base avant de commencer votre développement.
+
+1. Créez votre projet sur [Gitlab](http://git.o2web.ca/gitlab/projects/new)
+2. Faites les commandes suivantes dans votre terminal à la racine de votre projet :
+	* `git init`
+	* `git checkout -b develop` 
+	
+  		_Il est conseillé d'utiliser une branche **"develop"** pour votre développement et non **"master"**._
+	* `git commit -m "first commit" -a`
+	* `git remote add origin git@git.o2web.ca:<votre-nom>/<nom-du-projet>.git` 
+	
+  		_Cette ligne vous est fourni dans les étapes suivant la création de votre projet._
+	* `git push -u origin develop`
+	
+## Changer la langue de l'admin de Wordpress<span id="changer-la-langue-de-ladmin-de-wordpress"></span>
+
+Par défaut, Wordpress est installé en anglais. Si vous désirez avoir l'admin en une autre langue(français par exemple), juste a changer la variable 
+
+	define('WPLANG', '');
+
+dans le fichier `config/application.php` par:
+
+	define('WPLANG', 'fr');
+	
+Dans le cas très improbable où vous auriez a installer wordpress dans une autre langue, vous pouvez ajouter
+
+	"koodimonni-language/<votre code de langue ici>": "dev-master",
+	
+au packages requis dans composer. La liste disponible est ici: [http://languages.koodimonni.fi/](http://languages.koodimonni.fi/)
+	
+------
+------
+------
+
+## Plugins Wordpress<span id="plugins-wordpress"></span>
+
+Les plugins que nous utilisons couramment sont déjà inclus dans le composer.json, Ils seront donc déjà installés dans votre projets. Ceci inclus **Advanced Custom field** et toutes ses extensions. Pour installer un plugin wordpress gratuit (disponible dans le [plugin directory](https://wordpress.org/plugins/)), procédez comme suit:
+
+* Trouver le nom du package / plugin qu'on veut installer en se référant au [wordpress plugin directory](https://wordpress.org/plugins/).
+* Trouver le package associé sur [Wp-Packagist](http://plugins.svn.wordpress.org/) 
+* Ajouter le plugin au fichier composer.json
+* Lancer la mise à jour avec la commande `composer update`
+
+
+------
+------
+------
+### Exemple<span id="exemple"></span>
+
+Sur le site de wordpress: **[Intuitive Custom Post Order](http://wordpress.org/plugins/intuitive-custom-post-order/changelog/)**
+
+Sur le le repo packagist: [http://plugins.svn.wordpress.org/intuitive-custom-post-order/](http://plugins.svn.wordpress.org/intuitive-custom-post-order/)
+
+Utiliserait la commande suivante dans le terminal pour l'ajouter au projet :
+
+	composer require wpackagist-plugin/intuitive-custom-post-order:dev-trunk
+	
+### A propos des versions des plugins<span id="a-propos-des-versions-des-plugins"></span>
+
+Par défaut, les plugins vont avoir une version courante, considérée comme la version la plus récente, appelée `dev-trunk`.
+
+Pour verrouiller l'installation à une version particulière, vous pouvez utiliser les tags de version tels qu'il apparaissent dans le changelog du plugin de wordpress.
+
+Seulement les tags numériques sont valides:
+
+* 3.9.x-dev (non valide)
+* 3.9.2 (valide)
+
+### Installation d'un plugin qui n'est pas sur WP-Packagist à l'aide du lien de téléchargement<span id="installation-plugin-zip"></span>
+
+Ajouter les lignes suivantes dans composer.json, dans la section repositories.
+
+    {
+        "type": "package",
+        "package": {
+            "name": <nom-du-plugin>,
+            "version": <version-du-plugin>,
+            "type": "wordpress-plugin",
+            "dist": {
+                "type": "zip",
+                "url": <url-du-zip-du-plugin>
+            },
+            "require" : {
+            "composer/installers": "~1.0"
+            }
+        }
+    }
+    
+Et dans la section require:
+        
+    <nom-du-plugin>: <version-du-plugin>
+
+# Aider sur un projet Wordpress<span id="aider-sur-un-projet-wordpress"></span>
+
+**Note : Ceci est pour faire une installation local seulement.**
+
+1. Dans votre terminal, assurez-vous d'être au path root de votre environnement local, exemple : `/Applications/MAMP/htdocs/`.
+2. Git clone du projet sur lequel vous devez aider ` git@git.o2web.ca:<nom-du-master>/<nom-du-projet>.git`
+3. Déplacez-vous au root du projet `cd <nom-du-projet>`
+4. Utilisez la commande suivante: `composer run-script post-root-package-install`
+5. Utilisez la commande suivante: `composer install`
+7. Ouvrez `.env` ( _qui se situe au root du projet_ ) à l'aide de votre éditeur de texte et insérez les informations de database local ou remote.
+	* `DB_NAME` - Nom de la database
+	* `DB_USER` - User de la database
+	* `DB_PASSWORD` - Mot de passe de la database
+	* `DB_HOST` - Le host de la database
+	* `WP_ENV` - Spécifier l'environment (`development`, `staging`, `production`)
+	* `WP_HOME` - URL de votre site (http://example.com)
+	* `WP_SITEURL` - URL vers Wordpress (http://example.com/wp)
+8. Configurez votre serveur Apache (MAMP ou XAMPP) pour que le root pointe sur exemple : `/Applications/MAMP/htdocs/<nom-du-projet>/web/`
+
+# Déployer avec Capistrano<span id="dployer-avec-capistrano"></span>
+
+Gems requis:
+
+* capistrano (> 3.2.0)
+* capistrano-composer
+
+Ils peuvent être installés à l'aide de la commande : `gem install <nom-du-gem>` mais nous recommandons d'utiliser [Bundler](http://bundler.io/). Bundler est simplement l'équivalent Ruby de Composer. Tout comme Composer gère les dépendances/packages PHP, Bundler gère les dépendances/gems Ruby. Bundler est lui même un Gem et peut être installé avec la commande : `gem install bundler` (sudo peut être requis).
+
+Le `Gemfile` au root du repo specifie les Gems requises (au même titre que `composer.json`). Une fois Bundler installé, exécutez 
+
+	bundle install
+	
+pour installer le Gem dans le `Gemfile`. En utilisant Bundler, vous devrez prefixer la commande `cap` avec `bundle exec` comme illustré plus bas (ce qui garanti que vous n'utilisez pas de Gems qui peut provoquer des conflits).
+
+Voir [http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/](http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/) pour la meilleure façon de mettre en place des authentifications de clé SSH à vos serveurs de sans mot de passe (et sécuriser) le déploiement.
+
+## Étapes de déploiement<span id="tapes-de-dploiement"></span>
+
+**VÉRIFIEZ QUE VOTRE CODE EST COMMITÉ ET PUSHÉ DANS LA BONNE BRANCHE AVANT DE LANCER LE DÉPLOIEMENT**
+
+1. Éditez `config/deploy/<stage>.rb` et `config/deploy.rb` avec les options de connexion et paramètres nécessaires au déploiement.
+2. Avant votre premier déploiement, utilisez la commande suivante pour créer les dossiers/symlinks nécessaires:
+	
+		bundle exec cap <stage> deploy:check
+
+
+	Note : Si l'étape 2 retourne une erreur de login, utilisez la commande suivante avant de refaire l'étape 2 à nouveau :
+	
+		ssh-copy-id <user>@<host>
+		
+	**Alternativement**, si vous n'avez pas installé ssh-copy-id, vous pouvez utiliser la commande suivante (qui est équivalente):
+
+		cat ~/.ssh/id_rsa.pub | ssh <user>@<host> 'mkdir -p .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
+		
+	_Remplacez `<user>` et `<host>`._
+	
+	**ATTENTION:** n'oubliez pas dans tous les cas de charger votre clef ssh dans *l'agent SSH* en utilisant la commande suivante si vous éprouvez des problèmes de connexion.
+	
+		ssh-add
+		
+	Vous devriez recevoir une réponse indiquant que votre clé ssh a été chargée ex: *Identity added: /Users/louim/.ssh/id_rsa (/Users/louim/.ssh/id_rsa)*
+	
+	Vous aurez une **erreur** spécifiant que le fichier `.env` est manquant, procédez à l'étape 3. **Ceci est normal**.
+	
+3. Ajoutez le fichier `.env` (changez les informations nécéssaires une fois le fichier transféré) au dossier `shared/` dans le path `<deploy_to>` (spécifié dans le fichier deploy.rb) sur le remote server (ex: `/home/<user>/<nom-de-l'application>/<stage>/shared/.env`)
+4. Utilisez la commande de déploiement :
+
+		bundle exec cap <stage> deploy
+
+	_Remplacez `<stage>` par "staging" ou "production" dépendant de votre besoin._
+5. *(Optionnel)* Utilisez la commande `bundle exec cap <stage> uploads:sync` Pour synchroniser les fichiers uploadés entre votre version locale et le serveur. **Attention, il s'agit d'une synchronisation bidirectionnelle.** Pour synchroniser les fichier entre le `staging` et la `production`, utilisez `bundle exec cap staging uploads:sync` pour ramener les uploads puis `bundle exec cap production uploads:sync` pour les envoyer en production.
+
+### wp-cron
+
+Bedrock Désactive le WP Cron via `define('DISABLE_WP_CRON', true)`;. Si vous avez besoin des fonctionalitées du cron de Wordpress (exemple les post qui se publient à une heure précise), vous devez aller ajouter un cronjob dans le crontab manuellement:
+
+	*/5 * * * * curl http://<website_url>/wp/wp-cron.php

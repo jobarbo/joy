@@ -1532,15 +1532,24 @@ img.aligncenter {
 	border-bottom: 1px solid #eee;
 	border-top: 1px solid #eee;
 	text-align: center;
+	display: flex;
+	height: 45vh;
+	background-image: url(/app/uploads/2018/05/tournesol.jpg);
+	background-repeat: no-repeat;
+	background-position: 0% 90%;
+	background-size: cover;
+}
+.site-header .inner,
+.site-header .site-branding{
+	display: flex;
+}
+.site-header .site-branding{
+	align-items: center;
 }
 
-.site-header .site-branding {
-	padding-bottom: 70px;
-	padding-top: 60px;
-}
 
 .site-title {
-	font: 36px/1.1 'Crimson Text', serif;
+	font: 86px/1.1 'leira', serif;
 	margin-bottom: 0;
 }
 
@@ -1566,6 +1575,10 @@ img.aligncenter {
  * 6.1 Posts and Pages
  * ----------------------------------------------------------------------------
  */
+#page.site{
+	background-image: url('images/geom.png');
+}
+
 .sticky,
 .bypostauthor {}
 
@@ -2250,6 +2263,13 @@ img.aligncenter {
 .widget_nav_menu ul {
 	list-style: none;
 	padding-left: 0;
+}
+
+.widget img{
+	border-radius: 50%;
+	width: 70%;
+	margin: auto;
+	display: block;
 }
 
 .widget .children,

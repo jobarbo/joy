@@ -1,0 +1,71 @@
+// ==========================================================================
+// MIXINS - Typography
+// ==========================================================================
+
+// - - - Font smoothing - - -
+=font-smoothing($value: on)
+  @if $value == on
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+  @else
+    -webkit-font-smoothing: subpixel-antialiased
+    -moz-osx-font-smoothing: auto
+
+// - - - Placeholder - - -
+=placeholder($color, $font-size: rem($font-size-default), $lineheight: rem($line-height-default), $fontstyle: normal, $fontweight: normal)
+  &::-webkit-input-placeholder
+    font-size: $font-size !important
+    line-height: $lineheight !important
+    font-style: $fontstyle !important
+    font-weight: $fontweight !important
+    color: $color !important
+    opacity: 1 !important
+  &:-moz-placeholder
+    font-size: $font-size !important
+    line-height: $lineheight !important
+    font-style: $fontstyle !important
+    font-weight: $fontweight !important
+    color: $color !important
+    opacity: 1 !important
+  &::-moz-placeholder
+    font-size: $font-size !important
+    line-height: $lineheight !important
+    font-style: $fontstyle !important
+    font-weight: $fontweight !important
+    color: $color !important
+    opacity: 1 !important
+  &:-ms-input-placeholder
+    font-size: $font-size !important
+    line-height: $lineheight !important
+    font-style: $fontstyle !important
+    font-weight: $fontweight !important
+    color: $color !important
+    opacity: 1 !important
+  &::placeholder
+    font-size: $font-size !important
+    line-height: $lineheight !important
+    font-style: $fontstyle !important
+    font-weight: $fontweight !important
+    color: $color !important
+    opacity: 1 !important
+
+
+// - - - Strip units - - -
+@function strip-unit($value)
+  @return $value / 1
+
+// - - - PX to EM - - -
+// divide by 16
+@function em($px)
+  @return #{strip-unit($px / $font-size-default)}em
+
+// - - - EM to PX - - -
+// multiply by 16
+@function px($em)
+  @return #{strip-unit($em * $font-size-default)}px
+
+// - - - PX to REM - - -
+// divide by 16
+@function rem($px)
+  @return #{strip-unit($px / $font-size-default)}rem

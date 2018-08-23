@@ -32,10 +32,10 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}/#{fetch(:stage)}"
 set :tmp_dir, "/home/#{fetch(:user)}/tmp"
 
 # Set the default symlink folders to symlink after the deployment cycle is done.
-set :bedrock_dev_symlink, 'dev'
+set :bedrock_staging_symlink, 'dev'
 set :bedrock_production_symlink, 'public_html'
 set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
-
+SSHKit.config.command_map[:composer] = "~/bin/composer.phar"
 # Use :debug for more verbose output when troubleshooting
 set :log_level, :debug
 
@@ -52,9 +52,9 @@ namespace :deploy do
   task :link_release_to_public do
     on roles(:app) do
       within "/home/#{fetch(:user)}" do
-        if fetch(:stage) == :dev
-          info " Symlinking to Dev"
-          execute "rm -rf #{fetch(:bedrock_dev_symlink)} && ln -sf #{current_path}/web #{fetch(:bedrock_dev_symlink)}"
+        if fetch(:stage) == :staging
+          info " Symlinking to Staging"
+          execute "rm -rf #{fetch(:bedrock_staging_symlink)} && ln -sf #{current_path}/web #{fetch(:bedrock_staging_symlink)}"
         else
           info " Symlinking to Production"
           execute "rm -rf #{fetch(:bedrock_production_symlink)} && ln -sf #{current_path}/web #{fetch(:bedrock_production_symlink)}"

@@ -1,0 +1,92 @@
+// ==========================================================================
+// BASE - Titles
+// ==========================================================================
+
+
+// Style mixins
+// ==========================================================================
+
+=title-1
+  font: bold rem(48) / 1.2 $font-family-default
+  margin: 0 0 1em
+
+  +mobile-only
+    font-size: rem(36)
+
+=title-2
+  font: bold rem(36) / 1.2 $font-family-default
+  margin: 1.5em 0 0.5em
+
+  +mobile-only
+    font-size: rem(30)
+
+  &:first-child
+    margin-top: 0
+
+=title-3
+  font: bold rem(30) / 1.2 $font-family-default
+  margin: 1.5em 0 0.5em
+
+  +mobile-only
+    font-size: rem(24)
+
+  &:first-child
+    margin-top: 0
+
+=title-4
+  font: bold rem(24) / 1.2 $font-family-default
+  margin: 1.5em 0 0.5em
+
+  +mobile-only
+    font-size: rem(20)
+
+  &:first-child
+    margin-top: 0
+
+=title-5
+  font: bold rem(20) / 1.2 $font-family-default
+  margin: 1.5em 0 0.5em
+
+  +mobile-only
+    font-size: rem(18)
+
+  &:first-child
+    margin-top: 0
+
+=title-6
+  font: bold rem(18) / 1.2 $font-family-default
+  margin: 1.5em 0 0.5em
+
+  +mobile-only
+    font-size: rem(16)
+
+  &:first-child
+    margin-top: 0
+
+
+// Classes & Selectors
+// ==========================================================================
+
+h1,
+.title-1
+  +title-1
+
+h2,
+.title-2
+  +title-2
+
+h3,
+.title-3
+  +title-3
+
+h4,
+.title-4
+  +title-4
+
+h5,
+.title-5
+  +title-5
+
+h6,
+.title-6
+  +title-6

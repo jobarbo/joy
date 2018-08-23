@@ -1,0 +1,60 @@
+// ==========================================================================
+// BASE - Buttons
+// ==========================================================================
+
+button
+  cursor: pointer
+  outline: none
+
+
+// Style mixins
+// ==========================================================================
+
+=button
+  display: inline-block
+  padding: rem(8) rem(16)
+  border: 1px solid $grey-medium
+  background-color: $grey-light
+  color: #000
+  transition: background $trans-time linear, color $trans-time linear
+
+  +mobile-only
+    padding: rem(4) rem(8)
+
+  &:hover,
+  &:focus
+    background-color: $grey-medium
+    color: #000
+
+  &:active
+    background-color: $grey-dark
+    color: #fff
+
+=btn-important
+  background-color: #900
+  color: #fff
+
+  &:hover,
+  &:focus,
+  &:active
+    background-color: #c00
+
+=btn-small
+  padding: rem(4) rem(8)
+  font-size: rem(12)
+
+
+// Classes
+// ==========================================================================
+
+// Style all natural buttons without affecting those of the header/footer
+#{$content} button,
+#{$editor} button,
+.button
+  +button
+
+  &.-important
+    +btn-important
+
+  &.-small
+    +btn-small

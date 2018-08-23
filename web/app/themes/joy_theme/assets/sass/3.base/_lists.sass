@@ -1,0 +1,64 @@
+// ==========================================================================
+// BASE - Lists
+// ==========================================================================
+
+ul,
+ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+// Customizable lists
+// ==========================================================================
+
+// Customizable bullets, doesn't wrap under the bullet
+#{$content},
+#{$editor}
+  ul
+    margin-bottom: 1em
+
+    li
+      position: relative
+      padding-left: rem(24)
+
+      &::before
+        content: '\2022' // Bullet
+        position: absolute
+        top: 0
+        left: rem(4)
+        font-size: rem(18)
+        color: #000
+
+    &:last-child
+      margin-bottom: 0
+
+  ol
+    margin-bottom: 1em
+    counter-reset: bullet
+    list-style-type: none
+
+    li
+      position: relative
+      margin-left: rem(24)
+
+      &::before
+        counter-increment: bullet
+        content: counters(bullet, '.') '.'
+        position: absolute
+        top: 0
+        left: rem(-20)
+        color: #000
+
+      li
+        margin-left: rem(32)
+        &::before
+          left: rem(-32)
+
+        li
+          margin-left: rem(44)
+          &::before
+            left: rem(-44)
+
+    &:last-child
+      margin-bottom: 0

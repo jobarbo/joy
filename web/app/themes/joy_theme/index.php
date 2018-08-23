@@ -1,14 +1,34 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php get_header(); ?>
 
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'sage'); ?>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
+	<!-- section -->
+	<section>
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-<?php endwhile; ?>
+		<h1><?php _e( 'Lastest posts', 'theme' ); ?></h1>
 
-<?php the_posts_navigation(); ?>
+    <?php
+    // LIST POSTS
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+    $postsperpage = get_option('posts_per_page');
+
+    query_posts(array(
+      'post_type' => 'post',
+      'posts_per_page' => $postsperpage,
+      'post_status'    => 'publish',
+      'paged'          => $paged
+    ));
+
+    while(have_posts()): the_post();
+      get_template_part('blocks/post-box');
+    endwhile; ?>
+
+    <div class="pagination">
+      <?= pagination(); ?>
+    </div>
+
+    <?php wp_reset_query(); ?>
+
+	</section>
+	<!-- /section -->
+
+<?php get_footer(); ?>

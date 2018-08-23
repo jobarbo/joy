@@ -9,7 +9,7 @@ set :branch, :develop
 
 # Extended Server Syntax
 # ======================
-server 'jbarbeau.co', user: 'jbarbeau89', roles: %w{web app db}
+server '160.153.72.129', user: 'jbarbeau89', roles: %w{web app db}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options

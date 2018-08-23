@@ -1,124 +1,129 @@
-# [Sage](https://roots.io/sage/)
-[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
-[![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
+Démarrer un projet avec la base d'Assets
+=========================================
 
-Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
+1. À l'aide du terminal, rendez-vous à l'intérieur du dossier `_gulp` .
+2. `yarn` pour installer gulp et les autres dépendances en mode Global.
+3. `gulp` pour démarrer Gulp.
+4. Pour plus de détails sur Yarn, consultez l'article sur [Root](http://root.o2web.ca/base-dassets-transition-vers-yarn/).
 
-* Source: [https://github.com/roots/sage](https://github.com/roots/sage)
-* Homepage: [https://roots.io/sage/](https://roots.io/sage/)
-* Documentation: [https://roots.io/sage/docs/](https://roots.io/sage/docs/)
-* Twitter: [@rootswp](https://twitter.com/rootswp)
-* Newsletter: [Subscribe](http://roots.io/subscribe/)
-* Forum: [https://discourse.roots.io/](https://discourse.roots.io/)
+------
+------
+------
 
-## Requirements
+Javascript
+==========
 
-| Prerequisite    | How to check | How to install
-| --------------- | ------------ | ------------- |
-| PHP >= 5.4.x    | `php -v`     | [php.net](http://php.net/manual/en/install.php) |
-| Node.js >= 4.5  | `node -v`    | [nodejs.org](http://nodejs.org/) |
-| gulp >= 3.8.10  | `gulp -v`    | `npm install -g gulp` |
-| Bower >= 1.3.12 | `bower -v`   | `npm install -g bower` |
+### RequireJS
+Afin de segmenter notre Javascript en modules indépendants, nous utilisons RequireJS pour sa capacité à compiler plusieurs fichiers en un seul. 
+Le point de départ de la compilations se trouve dans le fichier `main.js`. Référencez chaque fichiers à compiler à l'intérieur du _array_ `require([...])`;
 
-For more installation notes, refer to the [Install gulp and Bower](#install-gulp-and-bower) section in this document.
+```
+// DEFINE MODULE
+require([
+  'plugin-one',
+  'plugin-two',
+  'modules/my-module'   // require your plugins and modules here
+], function($){
 
-## Features
+   // in order to keep your code clean, create individual files for each feature.
+   // place your files under /modules or /plugins
 
-* [gulp](http://gulpjs.com/) build script that compiles both Sass and Less, checks for JavaScript errors, optimizes images, and concatenates and minifies files
-* [BrowserSync](http://www.browsersync.io/) for keeping multiple browsers and devices synchronized while testing, along with injecting updated CSS and JS into your browser while you're developing
-* [Bower](http://bower.io/) for front-end package management
-* [asset-builder](https://github.com/austinpray/asset-builder) for the JSON file based asset pipeline
-* [Bootstrap](http://getbootstrap.com/)
-* [Theme wrapper](https://roots.io/sage/docs/theme-wrapper/)
-* ARIA roles and microformats
-* Posts use the [hNews](http://microformats.org/wiki/hnews) microformat
-* [Multilingual ready](https://roots.io/wpml/) and over 30 available [community translations](https://github.com/roots/sage-translations)
-
-Install the [Soil](https://github.com/roots/soil) plugin to enable additional features:
-
-* Cleaner output of `wp_head` and enqueued assets
-* Cleaner HTML output of navigation menus
-* Root relative URLs
-* Nice search (`/search/query/`)
-* Google CDN jQuery snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
-* Google Analytics snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
-
-See a complete working example in the [roots-example-project.com repo](https://github.com/roots/roots-example-project.com).
-
-## Theme installation
-
-Install Sage by copying the project into a new folder within your WordPress themes directory.
-
-Make sure [Composer](https://getcomposer.org/download/) has been installed before moving on.
-
-Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
-
-```shell
-# @ example.com/site/web/app/themes/
-$ composer create-project roots/sage your-theme-name 8.5.2
+}); // ... and that's about it for the main.js file.
 ```
 
-## Theme setup
+### Ajouter des plugins JS
 
-Edit `lib/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, post formats, and sidebars.
+Si vous voulez ajouter de nouveaux plugins, vous devrez tout d'abord les ajouter dans la liste qui se trouve ici : `_gulp/requireJS.json`. 
+Voici les informations requises : 
 
-## Theme development
-
-Sage uses [gulp](http://gulpjs.com/) as its build system and [Bower](http://bower.io/) to manage front-end packages.
-
-### Install gulp and Bower
-
-Building the theme requires [node.js](http://nodejs.org/download/). We recommend you update to the latest version of npm: `npm install -g npm@latest`.
-
-From the command line:
-
-1. Install [gulp](http://gulpjs.com) and [Bower](http://bower.io/) globally with `npm install -g gulp bower`
-2. Navigate to the theme directory, then run `npm install`
-3. Run `bower install`
-
-You now have all the necessary dependencies to run the build process.
-
-### Available gulp commands
-
-* `gulp` — Compile and optimize the files in your assets directory
-* `gulp watch` — Compile assets when file changes are made
-* `gulp --production` — Compile assets for production (no source maps).
-
-### Using BrowserSync
-
-To use BrowserSync during `gulp watch` you need to update `devUrl` at the bottom of `assets/manifest.json` to reflect your local development hostname.
-
-For example, if your local development URL is `http://project-name.dev` you would update the file to read:
-```json
-...
-  "config": {
-    "devUrl": "http://project-name.dev"
-  }
-...
 ```
-If your local development URL looks like `http://localhost:8888/project-name/` you would update the file to read:
-```json
-...
-  "config": {
-    "devUrl": "http://localhost:8888/project-name/"
-  }
-...
+"cookie":{  // identifiant unique utilisé par RequireJS 
+  "bower"     : "js-cookie",    // identifiant du répertoire Bower (optionnel)
+  "version"   : "~2.0",         // Version requise (optionnel)
+  "path"      : "plugins/js-cookie/js.cookie"  // Chemin d'accès où se trouve le fichier principal, relatif au main.js (requis)
+},
 ```
 
-## Documentation
+Vos plugins peuvent être ajoutés de deux façons : ils peuvent être chargés _via_ Bower, ou encore être versionnés dans le projet _via_ GIT. 
+Dans le deuxième cas, vos plugins seront versionnés automatiquement s'ils sont placés dans les dossiers `js/plugins/o2/` ou `js/plugins/app`.
 
-Sage documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
+Une fois que vous avez modifié le fichier `requireJS.json`, vous devrez redémarrer Gulp et mettre à jour la liste de _paths_ utilisés par RequireJS :
 
-## Contributing
+1. Assurez-vous que Gulp est arrêté : `ctrl + c`
+2. Générez les chemins d'accès et télécharger les plugins avec Yarn : `yarn`
+3. Redémarrez Gulp ! `gulp`
 
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
+------
+------
+------
 
-## Community
 
-Keep track of development and community news.
+Structure de dossiers
+=====================
 
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-* Listen to the [Roots Radio podcast](https://roots.io/podcast/)
+_gulp/
+-----
+
+C'est ici que tout se gère l'automatisation avec Gulp.
+Roulez `gulp` dans ce dossier pour démarrer Gulp.
+
+
+Gulpfile.js
+-----------
+
+Les actions de base (compilation du sass, compilation et minification du javascript, intégration de BrowserSync, etc.) sont déjà configurées.
+Si vous souhaitez changer le proxy utilisé par BrowserSync (localhost:8888 par défaut), pour le remplacer par un vhost par exemple, vous pouvez le faire dans le Gulpfile.
+
+Pour minifier votre code, utilisez la commande : `gulp export`
+
+
+Assets
+------
+
+### css/
+
+Contient le CSS compilé (application.css) ainsi que d'autres fichiers qui sont en CSS et non en SASS (reset.css, feuilles de styles de plugins jQuery, etc.)
+
+### fonts/
+
+Contient les webfonts s'il y a lieu ainsi qu'une structure de fichiers de base pour générer une font d'icônes avec [Fontcustom](http://fontcustom.com/)
+
+Pour utiliser le template de font d'icône:
+
+1. Commencez par installer fontcustom (voir lien plus haut).
+
+2. Enregistrez les icônes dans le dossier svg.
+
+3. Ensuite, en ligne de commande, rendez vous au dossier icons et faites la commande `fontcustom compile`. Ça va créer les fichiers de la font ainsi qu'un fichier SASS qui va aller se placer tout seul dans la base SASS (dossier 0.base/helpers). Ça va vous permettre d'utiliser les icônes à l'aide de classes, d'attributs data ou avec une mixin. Ne modifiez pas ce fichier directement parce qu'il va être écrasé si vous recompilez la font. Vous pouvez utiliser le fichier 3.typography/_icons.sass pour ajouter ou modifier les styles des icônes.
+
+4. Si vous utilisez une font d'icône, allez décomenter la ligne `@import 0.base/helpers/icons` dans application.sass.
+
+### img/
+
+Contient les images du site qui sont utilisées par le css (les images qui servent à la présentation uniquement). Les images de contenu devraient se retrouver dans un dossier d'uploads lié au CMS.
+
+### js/
+
+#### main.js
+
+Sert à importer les modules et définir les variables globales.
+Si vous désirez ajouter de nouveaux plugins à votre site/app, n'oubliez pas de les ajouter dans le fichier `_gulp/requireJS.json`, puis rouler la commande `yarn` dans ce même dossier.
+Peut également être utilisé pour «coder dur» votre javascript dans le cadre de petits projets
+
+#### modules/
+
+Contient les différents modules. Au départ, init.js et breakpoints.js sont fournis.
+
+Init.js sert à initialiser les différents modules en fonction de leur scope.
+
+Breakpoints.js sert à initialiser ou annuler les modules en fonction de breakpoints définis.
+
+Chaque module contient une ou des fonctions stockées dans des variables globales qui pourront être appelées à partir de init.js ou breakpoints.js. Chaque module peut faire appel aux autres scripts dont il a besoin pour fonctionner.
+
+#### vendor/
+
+Tous les plugins et les librairies venant de sources externes se retrouvent dans le dossier vendor. On peut utiliser Bower et Gulp pour ajouter automatiquement les fichiers requis dans ce dossier (voir instructions de Bower plus bas).
+
+### sass/
+
+Base de travail en SASS. Documentation à venir.

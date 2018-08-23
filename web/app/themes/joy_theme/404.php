@@ -1,7 +1,7 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php get_header(); ?>
 
-<div class="alert alert-warning">
-  <?php _e('Sorry, but the page you were trying to view does not exist.', 'sage'); ?>
-</div>
+  <section>
+  <h1><?= __('404 Page introuvable','theme') ?></h1>
+  </section>
 
-<?php get_search_form(); ?>
+<?php get_footer(); ?>

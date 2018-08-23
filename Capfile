@@ -7,8 +7,8 @@ require 'capistrano/deploy'
 # Load tasks from gems
 require 'capistrano/composer'
 
-# Load tasks from Capistrano WPCLI
-require 'capistrano/wpcli'
+# Uncomment the next line if you want to use the Capistrano WP-CLI wrapper
+# require 'capistrano/wpcli'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 # Customize this path to change the location of your custom tasks.

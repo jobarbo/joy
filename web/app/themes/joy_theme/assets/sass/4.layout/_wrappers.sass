@@ -1,0 +1,33 @@
+// ==========================================================================
+// LAYOUT - Wrappers
+// ==========================================================================
+
+
+.page-wrapper
+  position: relative
+  min-height: 100%
+
+=wrapper
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  padding-left: rem(20)
+  padding-right: rem(20)
+  +mobile-only
+    padding-left: rem(10)
+    padding-right: rem(10)
+
+=menu-wrapper
+  +wrapper
+  max-width: rem(1280)
+
+=text-wrapper
+  +wrapper
+  max-width: rem(800)
+
+
+.menu-wrapper
+  +menu-wrapper
+
+.text-wrapper
+  +text-wrapper

@@ -1,7 +1,17 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-dist
-bower_components
+.DS_Store
+.sass-cache
+
+
 node_modules
-npm-debug.log
-vendor
+bower_components
+
+assets/js/vendor/*
+assets/js/plugins/*
+assets/css/plugins/*
+assets/img/plugins/*
+
+!assets/js/plugins/modernizr
+!assets/js/plugins/app
+!assets/js/plugins/o2
+tests.html
+bs_config.json

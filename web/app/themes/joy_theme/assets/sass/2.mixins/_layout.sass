@@ -1,0 +1,74 @@
+// ==========================================================================
+// MIXINS - Layout
+// ==========================================================================
+
+// - - - Clearfix - - -
+=clearfix
+  &::before,
+  &::after
+    content: ' '
+    display: table
+
+  &::after
+    clear: both
+
+// - - - Align children - - -
+// La fonction «align-middle» qui peut être utilisée peut importe l'alignement vertical
+=align-children($v-align: middle)
+  display: inline-block
+  vertical-align: $v-align
+
+  &::before
+    content: ''
+    display: inline-block
+    height: 100%
+    width: 0
+    vertical-align: $v-align
+    margin-right: -0.3em
+
+  & > *
+    display: inline-block
+    vertical-align: $v-align
+
+
+// - - - Flexible grid, fixed gutters - - -
+=grid($cols: 3, $gutters: 25px)
+  font-size: 0
+  word-spacing: 0
+  line-height: 0
+  margin: 0 ($gutters / -2)
+
+  & > *
+    display: inline-block
+    font-size: 1rem
+    word-spacing: normal
+    line-height: 1
+    width: round(100% / $cols * 100) / 100
+    padding: 0 ($gutters / 2) $gutters
+
+
+// - - - Flexible columns, fixed gutters - - -
+=columns($gutters, $columns...)
+  font-size: 0
+  word-spacing: 0
+  line-height: 0
+  margin: 0 ($gutters / -2)
+
+  & > *
+    display: inline-block
+    font-size: 1rem
+    word-spacing: normal
+    line-height: 1
+    padding: 0 ($gutters / 2)
+    vertical-align: top
+
+    &:first-child
+      width: #{nth($columns, 1)}
+      $selector: ''
+
+      @if length($columns) > 1
+        @for $i from 2 through length($columns)
+          $selector: #{$selector}#{'+*'}
+
+          &#{$selector}
+            width: #{nth($columns, $i)}
