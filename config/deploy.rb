@@ -32,8 +32,8 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}/#{fetch(:stage)}"
 set :tmp_dir, "/home/#{fetch(:user)}/tmp"
 
 # Set the default symlink folders to symlink after the deployment cycle is done.
-set :bedrock_staging_symlink, 'dev'
-set :bedrock_production_symlink, 'public_html'
+set :bedrock_staging_symlink, 'joy_dev'
+set :bedrock_production_symlink, 'joy_prod'
 set :composer_install_flags, '--no-dev --no-interaction --optimize-autoloader'
 SSHKit.config.command_map[:composer] = "~/bin/composer.phar"
 # Use :debug for more verbose output when troubleshooting
