@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a83ed97dca9456260eb6022c286eda2",
+    "content-hash": "31a540cbb92b04793de34c10eca6dede",
     "packages": [
         {
             "name": "composer/installers",
@@ -168,16 +168,16 @@
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
-            "version": "1.0.0",
+            "version": "1.0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
-                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2"
+                "reference": "7941acd71725710a789daabe0557429da63e7ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/e9e767f2d9f994f358c34b41def2c410ad8717f2",
-                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/7941acd71725710a789daabe0557429da63e7ac6",
+                "reference": "7941acd71725710a789daabe0557429da63e7ac6",
                 "shasum": ""
             },
             "require": {
@@ -213,14 +213,14 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-05-31T18:42:33+00:00"
+            "time": "2018-01-29T14:49:29+00:00"
         },
         {
             "name": "koodimonni-language/core-fr_fr",
-            "version": "4.8",
+            "version": "4.9.8",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/4.8/fr_FR.zip",
+                "url": "https://downloads.wordpress.org/translation/core/4.9.8/fr_FR.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -238,16 +238,16 @@
         },
         {
             "name": "koodimonni/composer-dropin-installer",
-            "version": "1.1.0",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Koodimonni/Composer-Dropin-Installer.git",
-                "reference": "b09dd53d7bcbe41afec63bd142b17575935e2349"
+                "reference": "a749f19e3a3bc05529190961ed7529592b20138e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/b09dd53d7bcbe41afec63bd142b17575935e2349",
-                "reference": "b09dd53d7bcbe41afec63bd142b17575935e2349",
+                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/a749f19e3a3bc05529190961ed7529592b20138e",
+                "reference": "a749f19e3a3bc05529190961ed7529592b20138e",
                 "shasum": ""
             },
             "require": {
@@ -277,7 +277,7 @@
                 }
             ],
             "description": "Install packages or a few files from packages into custom paths without overwriting existing stuff.",
-            "time": "2017-01-11T19:10:05+00:00"
+            "time": "2018-02-04T10:52:01+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -346,10 +346,10 @@
         },
         {
             "name": "wordpress/advanced-custom-fields-pro",
-            "version": "5.3.7",
+            "version": "5.7.3",
             "dist": {
                 "type": "zip",
-                "url": "https://satis.o2web.ca/packages/wordpress/advanced-custom-fields-pro.5.3.7.zip",
+                "url": "https://satis.o2web.ca/packages/wordpress/advanced-custom-fields-pro.5.7.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -484,15 +484,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
-            "version": "4.9.6.2",
+            "version": "5.3.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-dashboard-for-wp/",
-                "reference": "tags/4.9.6.2"
+                "reference": "tags/5.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.4.9.6.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.5.3.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -504,15 +504,15 @@
         },
         {
             "name": "wpackagist-plugin/intuitive-custom-post-order",
-            "version": "3.0.8",
+            "version": "3.1.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/intuitive-custom-post-order/",
-                "reference": "tags/3.0.8"
+                "reference": "tags/3.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/intuitive-custom-post-order.3.0.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/intuitive-custom-post-order.3.1.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -564,15 +564,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "3.9",
+            "version": "8.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/3.9"
+                "reference": "tags/8.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.9.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.1.zip",
                 "reference": null,
                 "shasum": null
             },
