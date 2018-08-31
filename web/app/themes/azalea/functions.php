@@ -7,12 +7,12 @@
 add_filter('robots_txt', 'addToRoboText');
 
 function addToRoboText($robotext) {
-    $additions = "
+    $robotext = "
 # Added by filter in functions
-User-agent: NinjaBot
+User-agent: *
 Allow: /
 ";
-    return $robotext . $additions;
+    return $robotext;
 }
 if ( ! function_exists( 'jgtazalea_setup' ) ) :
 /**

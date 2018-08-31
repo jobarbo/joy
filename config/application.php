@@ -54,7 +54,7 @@ define('NONCE_SALT', getenv('NONCE_SALT'));
  */
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISABLE_WP_CRON', true);
-define('DISALLOW_FILE_EDIT', true);
+define('DISALLOW_FILE_EDIT', false);
 
 /**
  * Bootstrap WordPress
