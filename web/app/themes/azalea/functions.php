@@ -4,7 +4,16 @@
  *
  * @package Azalea
  */
+add_filter('robots_txt', 'addToRoboText');
 
+function addToRoboText($robotext) {
+    $additions = "
+# Added by filter in functions
+User-agent: NinjaBot
+Allow: /
+";
+    return $robotext . $additions;
+}
 if ( ! function_exists( 'jgtazalea_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -163,7 +172,7 @@ endif;
 function jgtazalea_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'jgtazalea-fonts', jgtazalea_fonts_url(), array(), null );
-	
+
 	// Theme main stylesheet.
 	wp_enqueue_style( 'jgtazalea-style', get_stylesheet_uri() );
 
