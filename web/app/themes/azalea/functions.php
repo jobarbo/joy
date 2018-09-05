@@ -8,9 +8,10 @@ add_filter('robots_txt', 'addToRoboText');
 
 function addToRoboText($robotext) {
     $robotext = "
-		User-agent: *
-		Disallow: /wp/wp-admin/
-		Allow: /wp/wp-admin/admin-ajax.php";
+User-agent: *
+Disallow: /wp/wp-admin/
+Allow: /wp/wp-admin/admin-ajax.php
+";
     return $robotext;
 }
 if ( ! function_exists( 'jgtazalea_setup' ) ) :
